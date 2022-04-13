@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
+
+*{
+  padding: 0;
+  text-decoration: none;
+}
+
+.background{
+  background-color: #F3F0F0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardLogin{
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logoLogin{
+  width: 230px;
+  height: 90px;
+  margin-top: 30px;
+}
+
+.cardLogin h1{
+  font-family: 'Sen', sans-serif;
+  margin-top: 30px;
+  font-size: 27px;
+}
+
+.formLogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.campoLogin{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.inputLogin{
+  width:  300px;
+  border: 0;
+  border-bottom: 1px solid #9C9C9C;
+  outline: 0;
+  font-size: 16px;
+  color: #424242;
+  font-family: 'Sen', sans-serif;
+  background: transparent;
+  transition: border-color 0.2s;
+  margin-left: 15px;
+
+}
+
+.inputLogin  ::placeholder {
+  color: #9C9C9C;
+}
+
+.formLogin button{
+  margin-top: 100px;
+}
+
+.botao{
+  width: 340px;
+  background-color: #060657;
+  color: white;
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  height: 45px;
+  border-radius: 3px;
+}
+
+.esqueceste{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.esqueceste a{
+  font-family: 'Sen', sans-serif;
+  color: #060657;
+  font-size: 13px;
+}
