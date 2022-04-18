@@ -4,14 +4,20 @@ import './index.css';
 import App from './pages/Login/App';
 import Veiculos from './pages/Veiculos/Veiculos';
 import reportWebVitals from './reportWebVitals';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import NotFound from './pages/NotFound/notFound';
+import Veiculo from './pages/veiculoUnico/veiculo';
 
 const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={App}/>
-       <Route path="/veiculos" component={Veiculos}/>
+        <Route exact path="/" component={App} />
+        <Route path="/veiculos" component={Veiculos} />
+        <Route path="/veiculo" component={Veiculo}/>
+
+        <Route path="/notFound" component={NotFound} /> {/* Not Found */}
+        <Redirect to="/notFound" /> {/* Redireciona para Not Found caso não encontre nenhuma rota */}
 
       </Switch>
     </div>
@@ -20,7 +26,7 @@ const routing = (
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-routing
+  routing
 );
 
 // If you want to start measuring performance in your app, pass a function

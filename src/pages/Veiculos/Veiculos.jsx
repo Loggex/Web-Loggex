@@ -4,6 +4,8 @@ import Navbar from '../../Components/Navbar';
 import check from '../../assets/checkmark.svg'
 import chevron from '../../assets/chevronDir.svg'
 
+import '../../assets/App.css'
+
 export default function Veiculos(){
     return(
         <div className='backgroundapp'>
