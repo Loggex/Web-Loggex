@@ -22,9 +22,11 @@ function App() {
               <input className="inputLogin" type="password"placeholder="Senha"></input>
             </div>
             <div className="esqueceste">
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Esqueceu sua senha?</a>
+              <a href="">Esqueceu sua senha?</a>
             </div>
+            <a href="/veiculos">
             <button className='botao'>Entrar</button>
+            </a>
           </form>
         </div>
       </div>
