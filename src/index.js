@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './pages/Login/App';
 import Veiculos from './pages/Veiculos/Veiculos';
+import Motoristas from './pages/Motoristas/Motoristas';
 import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
@@ -10,8 +11,10 @@ const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={App}/>
+
+       <Route exact path="/" component={App}/>
        <Route path="/veiculos" component={Veiculos}/>
+       <Route path="/motoristas" component={Motoristas}/>
 
       </Switch>
     </div>

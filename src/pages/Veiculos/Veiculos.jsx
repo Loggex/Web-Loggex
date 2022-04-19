@@ -12,7 +12,7 @@ export default function Veiculos(){
                 <div className='posMain'>
                     <h1>Veículos</h1>
 
-                    <div className='cardCarro'>
+                    <div className='card'>
                         <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="imagem do carro" className='imgVeiculo'/>
                         <div className='infoVeiculo'>
                             <span className='nomeVeiculo'>Veiculo</span>
@@ -24,7 +24,7 @@ export default function Veiculos(){
                             <span>Operante</span>
                             <img src={check} alt="marca de ok" />
                         </div>
-                        <div className='sidebarVeiculo'>
+                        <div className='next'>
                             <img src={chevron} alt="" />
                         </div>
                     </div>
