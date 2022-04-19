@@ -23,32 +23,65 @@ export default function Veiculo() {
                 <div className="containerInfoVeiculo">
                     <div className="containerVeiculo">
 
-                        <div className="infoVeiculo1">
-                            <div className="especInfo">
-                                <img src="../../assets/carbon_license.png" alt="" className="img_placa" />
-                                <p className="infoPergunta">Placa:</p>
-
-                                <p className="infoResposta">BRAE2019</p>
-                            </div>
-                            <div className="especInfo">
-                                <p className="infoPergunta">Ano de fabricação:</p>
-
-                                <p className="infoResposta">BRAE2019</p>
-                            </div>
-                            <div className="especInfo">
-                                <p className="infoPergunta">Placa:</p>
-
-                                <p className="infoResposta">BRAE2019</p>
-                            </div>
-                            
-
-
+                        <div className="containerprinc">
+                            <p className="infoPergunta">Operacional:</p>
+                            <p className="infoResposta">Sim</p>
                         </div>
-                        <div className="infoVeiculo1">
-                            <p>Placa</p>
-                            <p>Placa</p>
-                            <p>Placa</p>
-                            <p>Placa</p>
+                        <div className="containerveiculo2">
+                            <div className="infoVeiculo1">
+
+
+
+
+
+                                <div className="especInfo">
+                                    <img src="carbon_license" alt="" />
+                                    <p className="infoPergunta">Placa:</p>
+
+                                    <p className="infoResposta">BRAE2019</p>
+                                </div>
+                                <div className="especInfo">
+                                    <p className="infoPergunta">Ano de fabricação:</p>
+
+                                    <p className="infoResposta">04/05/2015</p>
+                                </div>
+                                <div className="especInfo">
+                                    <p className="infoPergunta">Tem seguro:</p>
+
+                                    <p className="infoResposta">Sim</p>
+                                </div>
+
+
+
+                            </div>
+
+                            <div className="infoVeiculo1">
+
+
+
+
+
+                                <div className="especInfo">
+                                    <img src="carbon_license" alt="" />
+                                    <p className="infoPergunta">Placa:</p>
+
+                                    <p className="infoResposta">BRAE2019</p>
+                                </div>
+                                <div className="especInfo">
+                                    <p className="infoPergunta">Ano de fabricação:</p>
+
+                                    <p className="infoResposta">04/05/2015</p>
+                                </div>
+                                <div className="especInfo">
+                                    <p className="infoPergunta">Tem seguro:</p>
+
+                                    <p className="infoResposta">Sim</p>
+                                </div>
+
+
+
+                            </div>
+
                         </div>
 
                     </div>
