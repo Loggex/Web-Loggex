@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../../Components/Navbar';
-import check from '../../assets/checkmark.svg'
-import chevron from '../../assets/chevronDir.svg'
+import check from '../../assets/checkmark.svg';
+import chevron from '../../assets/chevronDir.svg';
+
 
 import '../../assets/Veiculo.css'
 
@@ -24,6 +25,7 @@ export default function Veiculo() {
 
                         <div className="infoVeiculo1">
                             <div className="especInfo">
+                                <img src="../../assets/carbon_license.png" alt="" className="img_placa" />
                                 <p className="infoPergunta">Placa:</p>
 
                                 <p className="infoResposta">BRAE2019</p>
@@ -38,11 +40,7 @@ export default function Veiculo() {
 
                                 <p className="infoResposta">BRAE2019</p>
                             </div>
-                            <div className="especInfo">
-                                <p className="infoPergunta">Placa:</p>
-
-                                <p className="infoResposta">BRAE2019</p>
-                            </div>
+                            
 
 
                         </div>
