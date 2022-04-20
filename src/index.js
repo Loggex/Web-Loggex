@@ -4,6 +4,8 @@ import './index.css';
 import App from './pages/Login/App';
 import Veiculos from './pages/Veiculos/Veiculos';
 import Motoristas from './pages/Motoristas/Motoristas';
+import Manutencoes from './pages/Manutenções/Manutencoes'
+import Rotas from './pages/Rotas/Rotas'
 import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
@@ -15,6 +17,10 @@ const routing = (
        <Route exact path="/" component={App}/>
        <Route path="/veiculos" component={Veiculos}/>
        <Route path="/motoristas" component={Motoristas}/>
+       <Route path="/manutencoes" component={Manutencoes}/>
+       <Route path="/rotas" component={Rotas}/>
+
+
 
       </Switch>
     </div>
