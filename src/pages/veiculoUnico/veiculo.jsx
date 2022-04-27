@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../../Components/Navbar';
-import check from '../../assets/checkmark.svg';
-import chevron from '../../assets/chevronDir.svg';
-
+import { GoNote } from "react-icons/go";
+import { MdOutlineCheckCircle } from "react-icons/md";
+import { IoCalendarOutline } from "react-icons/io5";
+import { BiMessageCheck } from "react-icons/bi";
+import { BiColorFill } from "react-icons/bi";
+import { IoMdCar } from "react-icons/io";
+import { GiBackwardTime } from "react-icons/gi";
 
 import '../../assets/Veiculo.css'
+import { Link } from 'react-router-dom';
 
 export default function Veiculo() {
     return (
@@ -22,11 +27,12 @@ export default function Veiculo() {
 
                 <div className="containerInfoVeiculo">
                     <div className="containerVeiculo">
-
-                        <div className="containerprinc">
+                        <div className="especInfo">
+                            <MdOutlineCheckCircle className="goOp2" />
                             <p className="infoPergunta">Operacional:</p>
                             <p className="infoResposta">Sim</p>
                         </div>
+
                         <div className="containerveiculo2">
                             <div className="infoVeiculo1">
 
@@ -35,18 +41,20 @@ export default function Veiculo() {
 
 
                                 <div className="especInfo">
-                                    <img src="carbon_license" alt="" />
+                                    <GoNote className="goFilePlaca" />
                                     <p className="infoPergunta">Placa:</p>
 
                                     <p className="infoResposta">BRAE2019</p>
                                 </div>
-                                <div className="especInfo">
-                                    <p className="infoPergunta">Ano de fabricação:</p>
+                                <div className="especInfoAno">
+                                    <IoCalendarOutline className="goCalendar" />
+                                    <p className="infoPerguntaExato">Ano de fabricação:</p>
 
                                     <p className="infoResposta">04/05/2015</p>
                                 </div>
                                 <div className="especInfo">
-                                    <p className="infoPergunta">Tem seguro:</p>
+                                    <BiMessageCheck className="goFileSeg" />
+                                    <p className="infoPerguntaExato">Tem seguro:</p>
 
                                     <p className="infoResposta">Sim</p>
                                 </div>
@@ -62,20 +70,22 @@ export default function Veiculo() {
 
 
                                 <div className="especInfo">
-                                    <img src="carbon_license" alt="" />
-                                    <p className="infoPergunta">Placa:</p>
+                                    
+                                    <p className="infoPergunta">Quilometragem:</p>
 
-                                    <p className="infoResposta">BRAE2019</p>
+                                    <p className="infoResposta">27.000km</p>
                                 </div>
                                 <div className="especInfo">
-                                    <p className="infoPergunta">Ano de fabricação:</p>
+                                    <BiColorFill className="goColor" />
+                                    <p className="infoPergunta">Cor:</p>
 
-                                    <p className="infoResposta">04/05/2015</p>
+                                    <p className="infoResposta">Vermelho</p>
                                 </div>
-                                <div className="especInfo">
-                                    <p className="infoPergunta">Tem seguro:</p>
+                                <div className="especInfoChassi">
+                                    <IoMdCar className="goFile" />
+                                    <p className="infoPergunta">Chassi:</p>
 
-                                    <p className="infoResposta">Sim</p>
+                                    <p className="infoResposta">3AA eAG510 2c 6B1818</p>
                                 </div>
 
 
@@ -83,6 +93,14 @@ export default function Veiculo() {
                             </div>
 
                         </div>
+                        <div className="containerprincLast">
+                            <GiBackwardTime className="goOp" />
+                            <p className="infoPergunta">Último Registro:</p>
+                            <p className="infoResposta">"O escapamento foi consertado"</p>
+                        </div>
+                        <Link className='btnManu' >  <span className="editP">Editar registros / Agendar manutenção</span></Link>
+
+                        
 
                     </div>
                 </div>

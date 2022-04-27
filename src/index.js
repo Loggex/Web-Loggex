@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound/notFound';
 import Veiculo from './pages/veiculoUnico/veiculo';
+import Motorista from './pages/MotoristaUnico/Motorista';
 
 const routing = (
   <Router>
@@ -15,6 +16,7 @@ const routing = (
         <Route exact path="/" component={App} />
         <Route path="/veiculos" component={Veiculos} />
         <Route path="/veiculo" component={Veiculo}/>
+        <Route path="/Motorista" component={Motorista}/>
 
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" /> {/* Redireciona para Not Found caso não encontre nenhuma rota */}
