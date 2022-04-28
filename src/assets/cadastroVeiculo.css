@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    text-decoration: none;
+}
+
+.backgroundapp{
+    background-color: #F3F0F0;
+
+}
+
+.fundoCadastro{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.container{
+    width: 1200px;
+    height: 800px;
+    margin:auto;
+}

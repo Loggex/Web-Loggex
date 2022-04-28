@@ -7,14 +7,16 @@ import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound/notFound';
 import Veiculo from './pages/veiculoUnico/veiculo';
+import CadastroVeiculos from './pages/Veiculos/CadastroVeiculos';
 
 const routing = (
   <Router>
     <div>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/veiculos" component={Veiculos} />
+        <Route path="/Veiculos" component={Veiculos} />
         <Route path="/veiculo" component={Veiculo}/>
+        <Route path="/CadastroVeiculos" component={CadastroVeiculos}/>
 
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" /> {/* Redireciona para Not Found caso não encontre nenhuma rota */}

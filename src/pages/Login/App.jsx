@@ -1,11 +1,12 @@
 import '../../assets/App.css';
 import logo from '../../assets/logo.svg'
 import password from '../../assets/password.svg'
-import email from '../../assets/email.svg'
+import emailImg from '../../assets/emailImg.svg'
+import React, {useState} from 'react';
 
 
-
-function App() {
+export default function App() {
+  const [email, setEmail] = useState('');
   return (
     <div className="App">
       <div className="background">
@@ -14,8 +15,9 @@ function App() {
           <h1>Acesse sua conta</h1>
           <form className="formLogin">
             <div className="campoLogin">
-              <img src={email} alt='Ilustração de email'></img>
-              <input className="inputLogin" type="email"placeholder="Email"></input>
+              <img src={emailImg} alt='Ilustração de email'></img>
+              <input className="inputLogin" type="email"placeholder="Email" value={email} onChangeText={text => setEmail}></input>
+              
             </div>
             <div className="campoLogin">
               <img src={password} alt='Ilustração de senha'></img>
@@ -33,5 +35,5 @@ function App() {
     </div>
   );
 }
-
-export default App;
+// console.log(email);
+// export default App;
