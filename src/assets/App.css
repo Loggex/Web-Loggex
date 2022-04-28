@@ -415,3 +415,102 @@ margin-top: 10px;
   font-size: 24px;
   margin-top: 5px;
 }
+
+#backgroundStart{
+  background: linear-gradient(314.93deg, #060657 0%, rgba(6, 6, 87, 0.977774) 40.24%, rgba(6, 6, 87, 0.874491) 66.36%, rgba(6, 6, 87, 0.777824) 90.37%, rgba(6, 6, 87, 0.5) 121.5%);
+  width: 100vw;
+  height: 100vh;
+}
+
+#blobBackground{
+  height:99.5vh;
+  position: fixed;
+  right: 0;
+  z-index: 0;
+
+}
+
+#backgroundStart main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logoSemi{
+  margin-top: 35px;
+  margin-left: 35px;
+  width: 30vh;
+}
+
+#posicaoTexto{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+#tituloStart{
+  color:white;
+  font-size: 50px;
+  width: 55%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sloganImg{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#ilusStart{
+  height: 350px;
+}
+
+#subtituloStart{
+  font-size:50px ;
+  font-weight:normal;
+  width: 70%;
+  text-align: center;
+  color: #12125F;
+}
+
+#zindex{
+  z-index: 1;
+}
+
+#blobStart{
+  position:fixed;
+  right: 0;
+  width: 33%;
+}
+
+#posBlob{
+  z-index: 1;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.botaoLogin{
+  background-color: red;
+  display: flex;
+  border:none;
+  border-radius: 10px;
+  align-items: center;
+  width: 40%;
+  height: 8%;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.botaoLogin span{
+font-family: 'Sen', sans-serif;
+color: white;
+font-weight: bold;
+font-size: 21px;
+margin-right: 5px;
+text-decoration: none;
+}

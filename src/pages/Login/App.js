@@ -5,7 +5,7 @@ import email from '../../assets/email.svg'
 
 
 
-function App() {
+function Login() {
   return (
     <div className="App">
       <div className="background">
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
