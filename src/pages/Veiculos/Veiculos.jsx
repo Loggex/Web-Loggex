@@ -7,6 +7,15 @@ import chevron from '../../assets/chevronDir.svg'
 import '../../assets/App.css'
 
 export default function Veiculos(){
+
+    /* const  [veiculo, setVeiculo] = useState(); */
+
+
+    
+ 
+    
+
+
     return(
         <div className='backgroundapp'>
             <Navbar></Navbar>

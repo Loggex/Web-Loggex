@@ -43,15 +43,15 @@ main{
 
 .containerInfoVeiculo{
     width: 100%;
-    height: 60vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     padding-top: 30px;
 }
 
 .containerVeiculo{
-    width: 54vw;
-    height: 60vh;
+    width: 50%;
+    height: 85%;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -72,13 +72,14 @@ main{
 .infoPergunta{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     padding-left: 15px;
 }
-.infoPerguntaChassi{
+.infoTitulo{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
+    padding-left: 15px;
 }
 .infoPerguntaExato{
     font-family: 'Sen', sans-serif;
@@ -89,7 +90,7 @@ main{
 }
 
 .infoResposta{
-    font-size: 17px;
+    font-size: 24px;
     font-family: 'Sen', sans-serif;
     padding-left: 8px;
 }
@@ -100,36 +101,16 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px
 
 
 }
-.especInfoAno{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-    width: 81%;
 
-
-}
-.especInfoChassi{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 83%;
-    padding-bottom: 10px
-
-
-}
 
 .infoVeiculo1{
-    width: 25vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .containerprinc{
@@ -140,16 +121,6 @@ main{
     align-items: center;
     flex-direction: row;
 }
-.containerprincLast{
-    width:100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-bottom: 30px;
-}
-
 .containerveiculo2{
     width:100%;
     display: flex;
@@ -194,10 +165,6 @@ main{
     height: 30px;
     width: 6%;
 }
-.goOp2{
-    height: 30px;
-    width: 25%;
-}
 
 .btnManu{
     background: #060657;
@@ -216,4 +183,12 @@ main{
     font-size: 15px;
 }
 
+.infoVei{
+    width: 56%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
 

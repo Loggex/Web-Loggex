@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+*{
+    padding: 0;
+    text-decoration: none;
+  }
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backgroundapp{
+    background-color: #F3F0F0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.containerInfoVeiculo{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerVeiculo{
+    width: 50vw;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+    
+}
+
+.containerBox{
+    width: 95%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imagemRota{
+    padding-top: 15px;
+    width: 46%;
+}
+
+
+.goFile{
+    height: 30px;
+    width: 10%;
+    padding-left: 20px;
+
+}
+
+.infoPergunta{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 10px;
+    margin: 0px;
+}
+.infoTitulo{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 15px;
+    height: 40px;
+}
+
+
+.infoResposta{
+    font-size: 24px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 8px;
+}
+.infoResposta2{
+    font-size: 22px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 8px;
+    margin: 0px;
+}
+
+
+.especInfo{
+    width: 100%;
+    height: 55px;
+
+
+}
+.especInfo3{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+.especInfo4{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.especInfo{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0;
+
+
+}
+.especInfo1{
+    width: 65%;
+    padding-left: 20px;
+
+}
+.especInfo2{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.boxInfo{
+    width: 54%;
+}
+
+
+
+
+.boxInfoEmail{
+
+    height: 52%;
+}
+
+.containerBoxinfo{
+    width: 95%;
+    height: 48%;
+}
+
+.containerCarga{
+    width: 91%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+}
+
+.containerDesc{
+    width: 95%;
+}
+
+
+
