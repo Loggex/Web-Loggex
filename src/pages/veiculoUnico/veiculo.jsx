@@ -35,7 +35,7 @@ export default function Veiculo() {
 
         <div className="containerInfoVeiculo">
           <div className="containerVeiculo">
-            <div className="especInfo">
+            <div className="especInfoVeiculo">
               <MdOutlineCheckCircle className="goOp2" />
               <p className="infoPergunta">Operacional:</p>
               <p className="infoResposta">Sim</p>
@@ -43,7 +43,7 @@ export default function Veiculo() {
 
             <div className="containerveiculo2">
               <div className="infoVeiculo1">
-                <div className="especInfo">
+                <div className="especInfoVeiculo">
                   <GoNote className="goFilePlaca" />
                   <p className="infoPergunta">Placa:</p>
 
@@ -55,7 +55,7 @@ export default function Veiculo() {
 
                   <p className="infoResposta">04/05/2015</p>
                 </div>
-                <div className="especInfo">
+                <div className="especInfoVeiculo">
                   <BiMessageCheck className="goFileSeg" />
                   <p className="infoPerguntaExato">Tem seguro:</p>
 
@@ -64,12 +64,12 @@ export default function Veiculo() {
               </div>
 
               <div className="infoVeiculo1">
-                <div className="especInfo">
+                <div className="especInfoVeiculo">
                   <p className="infoPergunta">Quilometragem:</p>
 
                   <p className="infoResposta">27.000km</p>
                 </div>
-                <div className="especInfo">
+                <div className="especInfoVeiculo">
                   <BiColorFill className="goColor" />
                   <p className="infoPergunta">Cor:</p>
 

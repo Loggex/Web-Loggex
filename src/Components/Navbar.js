@@ -8,9 +8,26 @@ import rota from '../assets/rota.svg'
 import truck from '../assets/truck.svg'
 import logout from '../assets/logout.svg'
 import {Link} from 'react-router-dom'
+import { useHistory } from 'react-router';
 
 
 export default function Navbar(){
+const history = useHistory();
+    
+    const onMotorista = (e) => {
+        history.push("/Motorista");
+      };
+    const onVeiculos = (e) => {
+        history.push("/Veiculos");
+      };
+    const onRota = (e) => {
+        history.push("/Rota");
+      };
+    
+
+
+
+
     return(
         <div id="FundoNavbar">
             <div className='card'>
@@ -22,10 +39,9 @@ export default function Navbar(){
                 <span className='subtitulonav'>Gestor de frotas</span>
                 <div className='botoes'>
                 <Link className='navButton'><img src={home}/><span>Home</span></Link>
-                <Link className='navButton'><img src={volante}/><span>Motoristas</span></Link>
-                <Link className='navButton'><img src={truck}/><span>Veiculos</span></Link>
-                <Link className='navButton'><img src={rota}/><span>Rotas</span></Link>
-                <Link className='navButton'><img src={manutencao}/><span>Manutenções</span></Link>
+                <Link onClick={onMotorista} className='navButton'><img src={volante}/><span>Motoristas</span></Link>
+                <Link onClick={onVeiculos} className='navButton'><img src={truck}/><span>Veiculos</span></Link>
+                <Link onClick={onRota} className='navButton'><img src={rota}/><span>Rotas</span></Link>
                 </div>
                 <button className='botaoSair'><span>Sair</span><img src={logout}></img></button>
             </section>

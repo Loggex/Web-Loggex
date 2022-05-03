@@ -21,42 +21,42 @@ export default function Gestor() {
         <div className='backgroundapp'>
             <Navbar></Navbar>
             <main>
-                <div className="boxVeiculo">
-                    <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="imagem do carro" className='imgVeiculo' />
+                <div className="boxGestor">
+                    <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="imagem do carro" className='imgGestor' />
                 </div>
-                <div className="boxcontainerveiculo">
-                    <h1 className="NomeVeiculo">Nome do Gestor</h1>
+                <div className="boxcontainerGestor">
+                    <h1 className="NomeGestor">Nome do Gestor</h1>
 
                 </div>
 
-                <div className="containerInfoVeiculo">
-                    <div className="containerVeiculo">
+                <div className="containerInfoGestor">
+                    <div className="containerGestor">
 
-                        <div className="containerveiculo2">
-                            <div className="infoVeiculo1">
+                        <div className="containerGestor2">
+                            <div className="infoGestor1">
                                 <div className="infoVei">
 
 
 
-                                    <div className="especInfo">
+                                    <div className="especInfoGestor1">
 
                                         <p className="infoTitulo">Dados do Gestor:</p>
                                     </div>
-                                    <div className="especInfo">
+                                    <div className="especInfoGestor">
                                         <AiOutlineMail className="goFile" />
 
                                         <p className="infoPergunta">Email:</p>
 
                                         <p className="infoResposta">Jojo@email.com</p>
                                     </div>
-                                    <div className="especInfo">
+                                    <div className="especInfoGestor">
                                         <AiOutlineMail className="goFile" />
 
                                         <p className="infoPergunta">CPF:</p>
 
                                         <p className="infoResposta">12345678</p>
                                     </div>
-                                    <div className="especInfo">
+                                    <div className="especInfoGestor">
                                         <GiSmartphone className="goFile" />
 
                                         <p className="infoPergunta">Telefone:</p>

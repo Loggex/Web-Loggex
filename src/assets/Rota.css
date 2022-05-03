@@ -23,14 +23,14 @@ main{
   justify-content: center;
 }
 
-.containerInfoVeiculo{
+.containerInfoRota{
     width: 100%;
     height: 75%;
     display: flex;
     justify-content: center;
 }
 
-.containerVeiculo{
+.containerRota{
     width: 50vw;
     height: 70vh;
     background-color: white;

@@ -1,31 +1,25 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../../Components/Navbar";
-import check from "../../assets/checkmark.svg";
-import chevron from "../../assets/chevronDir.svg";
-import { GoNote } from "react-icons/go";
-import { MdOutlineCheckCircle } from "react-icons/md";
 import { IoCalendarOutline } from "react-icons/io5";
-import { BiMessageCheck } from "react-icons/bi";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdCar } from "react-icons/io";
-import { GiBackwardTime } from "react-icons/gi";
-import { GiSmartphone } from "react-icons/gi";
 import { BsTruck } from "react-icons/bs";
-import { AiOutlineMail } from "react-icons/ai";
 import { RiSteering2Line } from "react-icons/ri";
 import imageRota from "../../assets/imageRota.svg";
 
 import "../../assets/Rota.css";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
-export default function Rota() {
+export default function Rota({route, navigation}) {
+
+    /* const rota= route.params */
+
+
   return (
     <div className="backgroundapp">
       <Navbar />
       <main>
-        <div className="containerInfoVeiculo">
-          <div className="containerVeiculo">
+        <div className="containerInfoRota">
+          <div className="containerRota">
             <div className="containerBox">
               <img src={imageRota} className="imagemRota" />
               <div className="boxInfo">

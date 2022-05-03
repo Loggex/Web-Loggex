@@ -23,13 +23,13 @@ main{
   justify-content: center;
 }
 
-.NomeVeiculo{
+.NomeMotorista{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
     font-size: 40px;
 }
 
-.boxVeiculo{
+.boxMotorista{
     width: 100%;
     height: 150px;
     display: flex;
@@ -37,11 +37,11 @@ main{
     padding-top: 40px;
 }
 
-.boxVeiculo img{
+.boxMotorista img{
     border-radius: 100px;
 }
 
-.containerInfoVeiculo{
+.containerInfoMotorista{
     width: 100%;
     height: 600px;
     display: flex;
@@ -49,9 +49,9 @@ main{
     padding-top: 30px;
 }
 
-.containerVeiculo{
+.containerMotorista{
     width: 50%;
-    height: 85%;
+    height: 45vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ main{
     
 }
 
-.boxcontainerveiculo{
+.boxcontainerMotorista{
     width: 100%;
     height: 90px;
     display: flex;
@@ -96,7 +96,7 @@ main{
 }
 
 
-.especInfo{
+.especInfoVeiculo{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,7 +106,7 @@ main{
 }
 
 
-.infoVeiculo1{
+.infoMotorista1{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -121,8 +121,9 @@ main{
     align-items: center;
     flex-direction: row;
 }
-.containerveiculo2{
+.containerMotorista2{
     width:100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;

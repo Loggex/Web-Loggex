@@ -23,13 +23,13 @@ main{
   justify-content: center;
 }
 
-.NomeVeiculo{
+.NomeGestor{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
     font-size: 40px;
 }
 
-.boxVeiculo{
+.boxGestor{
     width: 100%;
     height: 150px;
     display: flex;
@@ -37,11 +37,12 @@ main{
     padding-top: 40px;
 }
 
-.boxVeiculo img{
+.imgGestor{
     border-radius: 100px;
+    width: 10%;
 }
 
-.containerInfoVeiculo{
+.containerInfoGestor{
     width: 100%;
     height: 600px;
     display: flex;
@@ -49,7 +50,7 @@ main{
     padding-top: 30px;
 }
 
-.containerVeiculo{
+.containerGestor{
     width: 50%;
     height: 85%;
     background-color: white;
@@ -61,7 +62,7 @@ main{
     
 }
 
-.boxcontainerveiculo{
+.boxcontainerGestor{
     width: 100%;
     height: 90px;
     display: flex;
@@ -96,7 +97,7 @@ main{
 }
 
 
-.especInfo{
+.especInfoGestor{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -104,13 +105,22 @@ main{
 
 
 }
+.especInfoGestor1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+
+}
 
 
-.infoVeiculo1{
+.infoGestor1{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .containerprinc{
@@ -121,11 +131,13 @@ main{
     align-items: center;
     flex-direction: row;
 }
-.containerveiculo2{
+.containerGestor2{
     width:100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 100%;
+    align-items: center;
 }
 
 .goFile{
@@ -136,35 +148,12 @@ main{
 }
 .goFilePlaca{
     height: 30px;
-    width: 15%;
+    width: 14%;
     padding-left: 30px;
 
 }
 
-.goFileSeg{
-    height: 30px;
-    width: 25%;
-    padding-left: 30px;
 
-}
-
-.goCalendar{
-    height: 30px;
-    width: 15%;
-    padding-left: 30px;
-
-}
-
-.goColor{
-    height: 30px;
-    width: 25%;
-    padding-left: 30px;
-}
-
-.goOp{
-    height: 30px;
-    width: 6%;
-}
 
 .btnManu{
     background: #060657;

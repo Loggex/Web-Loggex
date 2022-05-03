@@ -95,7 +95,7 @@ main{
 }
 
 
-.especInfo{
+.especInfoVeiculo{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -147,7 +147,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .containerveiculo2{
