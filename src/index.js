@@ -8,6 +8,7 @@ import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-d
 import NotFound from './pages/NotFound/notFound';
 import Veiculo from './pages/veiculoUnico/veiculo';
 import CadastroVeiculos from './pages/Veiculos/CadastroVeiculos';
+import CadastroMotorista from './pages/Motoristas/CadastroMotorista';
 
 const routing = (
   <Router>
@@ -17,6 +18,7 @@ const routing = (
         <Route path="/Veiculos" component={Veiculos} />
         <Route path="/veiculo" component={Veiculo}/>
         <Route path="/CadastroVeiculos" component={CadastroVeiculos}/>
+        <Route path="/CadastroMotorista" component={CadastroMotorista}/>
 
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" /> {/* Redireciona para Not Found caso não encontre nenhuma rota */}

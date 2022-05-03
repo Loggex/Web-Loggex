@@ -1,7 +1,7 @@
 import Navbar from "../../Components/Navbar";
-import "../../assets/cadastroVeiculo.css";
+import "../../assets/cadastroMotorista.css";
 
-export default function CadastroVeiculos(){
+export default function CadastroMotorista(){
     return(
         <div className="backgroundapp">
             <Navbar></Navbar>
@@ -10,45 +10,47 @@ export default function CadastroVeiculos(){
                     <div className="fundoCadastro">
                         <h1>Cadastrar um veículo</h1>
                             <form action="" className="formCadastro">
-                                <div className="formulariosVeiculos">
+                                <div className="formularios">
                                     <div className="formColuna">
                                         <div className="inputDiv">
-                                        <h3>Placa</h3>
+                                        <h3>Nome completo</h3>
                                         <input type="text" />
                                         </div>
                                         <div className="inputDiv">
-                                        <h3>Cor</h3>
+                                        <h3>CPF</h3>
                                         <input type="text" />
                                         </div>
                                         <div className="inputDiv">
-                                        <h3>Ano de Fabricação</h3>
+                                        <h3>CNH</h3>
                                         <input type="text" />
+                                        </div>
+                                        <div className="inputDiv">
+                                        <h3>Sexo</h3>
+                                        <select name="Sexo" id="selectSexo">
+                                            <option value="masculino">Masculino</option>
+                                            <option value="feminino">Feminino</option>
+                                            <option value="outros">Outro</option>
+                                        </select>
                                         </div>
                                     </div>
                                     <div className="formColuna">
                                         <div className="inputDiv">
-                                        <h3>Tem seguro?</h3>
-                                        <select name="" id="selectSeguro">
-                                            <option value="true">Sim</option>
-                                            <option value="false">Não</option>
-                                            </select>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Chassi</h3>
+                                        <h3>Email</h3>
                                         <input type="text" />
                                         </div>
                                         <div className="inputDiv">
-                                        <h3>Quilometragem</h3>
+                                        <h3>Senha</h3>
+                                        <input type="text" />
+                                        </div>
+                                        <div className="inputDiv">
+                                        <h3>Confirmar senha</h3>
+                                        <input type="text" />
+                                        </div>
+                                        <div className="inputDiv">
+                                        <h3>Número de senha</h3>
                                         <input type="text" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="inputDiv">
-                                    <h3>Estado do Veículo</h3>
-                                    <select name="estadoVeiculo" id="">
-                                        <option value="true">Funcional</option>
-                                        <option value="false">Quebrado</option>
-                                    </select>
                                 </div>
                                 <input value="Cadastrar" type="submit" name="cadastrar" id="botaoCadastrar" />
                             </form>
