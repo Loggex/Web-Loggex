@@ -12,11 +12,25 @@ import { IoMdCar } from "react-icons/io";
 import { GiBackwardTime } from "react-icons/gi";
 import { GiSmartphone } from "react-icons/gi";
 import { AiOutlineMail } from "react-icons/ai";
+import api from "../../Services/api"
 
 import '../../assets/Motorista.css'
 import { Link } from 'react-router-dom';
 
 export default function Motorista() {
+
+    /* const [user, setUser] = useState();
+
+    useEffect(() => {
+        api
+          .get("/usuarios/2")
+          .then((response) => setUser(response.data))
+          .catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+          });
+      }, []);
+ */
+
     return (
         <div className='backgroundapp'>
             <Navbar></Navbar>

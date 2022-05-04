@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap");
 
-*{
+* {
   padding: 0;
   text-decoration: none;
 }
 
-.background{
-  background-color: #F3F0F0;
+.background {
+  background-color: #f3f0f0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,110 +14,109 @@
   align-items: center;
 }
 
-.cardLogin{
+.cardLogin {
   background-color: white;
   width: 400px;
   height: 600px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
 }
 
-.logoLogin{
+.logoLogin {
   width: 230px;
   height: 90px;
   margin-top: 30px;
 }
 
-.cardLogin h1{
-  font-family: 'Sen', sans-serif;
+.cardLogin h1 {
+  font-family: "Sen", sans-serif;
   margin-top: 30px;
   font-size: 27px;
 }
 
-.formLogin{
+.formLogin {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
-.campoLogin{
+.campoLogin {
   display: flex;
   align-items: center;
   margin-top: 60px;
 }
 
-.inputLogin{
-  width:  300px;
+.inputLogin {
+  width: 300px;
   border: 0;
-  border-bottom: 1px solid #9C9C9C;
+  border-bottom: 1px solid #9c9c9c;
   outline: 0;
   font-size: 16px;
   color: #424242;
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
   background: transparent;
   transition: border-color 0.2s;
   margin-left: 15px;
-
 }
 
-.inputLogin  ::placeholder {
-  color: #9C9C9C;
+.inputLogin ::placeholder {
+  color: #9c9c9c;
 }
 
-.formLogin button{
+.formLogin button {
   margin-top: 100px;
 }
 
-.botao{
+.botao {
   width: 340px;
   background-color: #060657;
   color: white;
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
   font-weight: bold;
   font-size: 16px;
   height: 45px;
   border-radius: 3px;
 }
 
-.esqueceste{
+.esqueceste {
   margin-top: 10px;
   width: 100%;
   display: flex;
   justify-content: right;
 }
 
-.esqueceste a{
-  font-family: 'Sen', sans-serif;
+.esqueceste a {
+  font-family: "Sen", sans-serif;
   color: #060657;
   font-size: 13px;
 }
 
-#FundoNavbar{
-  background-color: white; 
+#FundoNavbar {
+  background-color: white;
   height: 100vh;
   width: 30%;
   display: flex;
-  align-items: center;  
+  align-items: center;
   flex-direction: column;
 }
 
-#logoGeral{
+#logoGeral {
   margin-top: 30px;
   width: 130px;
   height: 50px;
 }
 
-.imgPerfil{
+.imgPerfil {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   z-index: 1;
   margin-top: 15%;
-
 }
 
-.sectionNav{
+.sectionNav {
   background-color: white;
   width: 100%;
   height: 100%;
@@ -127,69 +126,73 @@
   flex-direction: column;
 }
 
-.card{
+.card {
   display: flex;
-  align-items: center;  
+  align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 200px ;
-  background: linear-gradient(314.93deg, #060657 0%, rgba(6, 6, 87, 0.977774) 40.24%, rgba(6, 6, 87, 0.874491) 66.36%, rgba(6, 6, 87, 0.777824) 90.37%, rgba(6, 6, 87, 0.5) 121.5%);
+  height: 200px;
+  background: linear-gradient(
+    314.93deg,
+    #060657 0%,
+    rgba(6, 6, 87, 0.977774) 40.24%,
+    rgba(6, 6, 87, 0.874491) 66.36%,
+    rgba(6, 6, 87, 0.777824) 90.37%,
+    rgba(6, 6, 87, 0.5) 121.5%
+  );
 }
 
-
-.sectionNav h4{
-  font-family: 'Sen', sans-serif;
+.sectionNav h4 {
+  font-family: "Sen", sans-serif;
   font-weight: bold;
   font-size: 23px;
   margin-bottom: 10px;
   padding-top: 20px;
 }
 
-.subtitulonav{
-  font-family: 'Sen', sans-serif;
+.subtitulonav {
+  font-family: "Sen", sans-serif;
   font-size: 19px;
   color: #757575;
   margin-bottom: 15px;
 }
 
-.navButton{
+.navButton {
   width: 90%;
   border-radius: 10px;
   margin-top: 10px;
   height: 50px;
   display: flex;
   align-items: center;
-  
 }
 
-.navButton span{
-  font-family: 'Sen', sans-serif;
+.navButton span {
+  font-family: "Sen", sans-serif;
   font-weight: bold;
   font-size: 20px;
   color: black;
   margin-left: 20px;
 }
 
-.navButton img{
+.navButton img {
   margin-left: 10px;
 }
 
-
-.botoes{
+.botoes {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.botoes :hover{
+.botoes :hover {
   background-color: rgb(226, 226, 226);
 }
 
-.botaoSair{
+.botaoSair {
   background-color: red;
   display: flex;
-  border:none;
+  border: none;
   border-radius: 10px;
   align-items: center;
   width: 80%;
@@ -197,43 +200,42 @@
   margin-top: 20px;
   justify-content: center;
 }
-.botaoSair span{
-  font-family: 'Sen', sans-serif;
+.botaoSair span {
+  font-family: "Sen", sans-serif;
   color: white;
   font-weight: bold;
   font-size: 21px;
   margin-right: 5px;
 }
 
-.botaoSair img{
+.botaoSair img {
   height: 28px;
   cursor: pointer;
 }
 
-.backgroundapp{
-  background-color: #F3F0F0;
+.backgroundapp {
+  background-color: #f3f0f0;
   display: flex;
 }
 
-.posMain{
+.posMain {
   margin-top: 50px;
   margin-left: 120px;
   display: flex;
   flex-direction: column;
 }
 
-main{
+main {
   width: 100%;
 }
 
-h1{
-  font-family: 'Sen', sans-serif;
+h1 {
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   font-size: 38px;
-
 }
 
-.cardCarro{
+.cardCarro {
   width: 700px;
   height: 160px;
   border-radius: 10px;
@@ -244,40 +246,40 @@ h1{
   margin-bottom: 30px;
 }
 
-.imgVeiculo{
+.imgVeiculo {
   height: 100%;
   width: he;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.infoVeiculo{
+.infoVeiculo {
   margin-top: 18px;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.textoVeiculo{
+.textoVeiculo {
   margin-top: 9px;
   font-size: 18px;
   color: #757575;
-  }
-
-.nomeVeiculo{
-  font-family: 'Sen', sans-serif;
-font-weight: bold;
-font-size: 24px;
 }
 
-.infoVeiculo p{
+.nomeVeiculo {
+  font-family: "Sen", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.infoVeiculo p {
   margin-top: 10px;
   font-size: 18px;
   color: #000000;
   margin-bottom: 0;
 }
 
-.estadoVeiculo{
+.estadoVeiculo {
   margin-left: 30px;
   height: 65%;
   width: 17%;
@@ -288,18 +290,18 @@ font-size: 24px;
   align-items: center;
 }
 
-.estadoVeiculo span{
+.estadoVeiculo span {
   color: white;
   margin-top: 10px;
   font-weight: 400;
 }
 
-.estadoVeiculo img{
-margin-top: 10px;
+.estadoVeiculo img {
+  margin-top: 10px;
 }
 
-.sidebarVeiculo{
-  background-color: #0B0B5A;
+.sidebarVeiculo {
+  background-color: #0b0b5a;
   height: 100%;
   width: 50px;
   border-top-right-radius: 10px;

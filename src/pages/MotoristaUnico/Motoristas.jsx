@@ -3,10 +3,17 @@ import axios from "axios";
 import Navbar from "../../Components/Navbar";
 import check from "../../assets/checkmark.svg";
 import chevron from "../../assets/chevronDir.svg";
+import api from "../../Services/api"
+import { useLocation } from "react-router";
 
 import "../../assets/Motoristas.css";
 
 export default function Motoristas() {
+
+
+
+  
+
   return (
     <div className="backgroundapp">
         <Navbar/>

@@ -14,8 +14,8 @@ import { useHistory } from 'react-router';
 export default function Navbar(){
 const history = useHistory();
     
-    const onMotorista = (e) => {
-        history.push("/Motorista");
+    const onMotoristas = (e) => {
+        history.push("/Motoristas");
       };
     const onVeiculos = (e) => {
         history.push("/Veiculos");
@@ -39,7 +39,7 @@ const history = useHistory();
                 <span className='subtitulonav'>Gestor de frotas</span>
                 <div className='botoes'>
                 <Link className='navButton'><img src={home}/><span>Home</span></Link>
-                <Link onClick={onMotorista} className='navButton'><img src={volante}/><span>Motoristas</span></Link>
+                <Link onClick={onMotoristas} className='navButton'><img src={volante}/><span>Motoristas</span></Link>
                 <Link onClick={onVeiculos} className='navButton'><img src={truck}/><span>Veiculos</span></Link>
                 <Link onClick={onRota} className='navButton'><img src={rota}/><span>Rotas</span></Link>
                 </div>
