@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
 
 *{
     padding: 0;
@@ -21,6 +21,48 @@
     justify-content: center;
     align-items: center;
     /* margin-top:; */
+}
+
+.containerPerfil{
+    display: flex;
+    width: 50vw;
+    background-color: white;
+    box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.containerPerfil img{
+    height: 85%;
+    width: auto;
+    padding-left: 4%;
+}
+
+.containerPerfil div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2%;
+}
+
+.containerPerfil span{
+    padding-bottom: 10px;
+    /* font-family: ; */
+    font-size: 30px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 800;
+}
+
+.containerPerfil input{
+    height: 35px;
+    width: 60%;
+    font-family: 'Sen', sans-serif;
+    font-weight: 800;
+    background-color: #B0B0B0;
+    border: none;
+    font-size: 15px;
 }
 
 .fundoCadastro{
@@ -73,6 +115,7 @@ h3{
     height: 60%;
     border-radius: 15px;
     padding-left: 10px;
+    border-width: 1px;
     /* margin-top: ; */
     /* border: 50px; */
 }
@@ -92,7 +135,7 @@ h3{
     background-color: #060657;
     font-family: "Poppins";
     color: white;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 550;
+    font-size: 16px;
     border-radius: 2px;
 }
