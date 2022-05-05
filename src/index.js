@@ -10,6 +10,7 @@ import Veiculo from './pages/veiculoUnico/veiculo';
 import CadastroVeiculos from './pages/Veiculos/CadastroVeiculos';
 import CadastroMotorista from './pages/Motoristas/CadastroMotorista';
 import CadastroRotas from '../src/pages/Rotas/CadastroRotas'
+import CadastroManutencoes from './pages/Manutenções/CadastroManutencoes';
 
 const routing = (
   <Router>
@@ -21,6 +22,7 @@ const routing = (
         <Route path="/CadastroVeiculos" component={CadastroVeiculos}/>
         <Route path="/CadastroMotorista" component={CadastroMotorista}/>
         <Route path="/CadastroRotas" component={CadastroRotas}/>
+        <Route path="/CadastroManutencoes" component={CadastroManutencoes}/>
         
 
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
