@@ -8,6 +8,7 @@ import { BiMessageCheck } from "react-icons/bi";
 import { BiColorFill } from "react-icons/bi";
 import { IoMdCar } from "react-icons/io";
 import { GiBackwardTime } from "react-icons/gi";
+import { FaRoad } from "react-icons/fa";
 
 import "../../assets/Veiculo.css";
 import { Link } from "react-router-dom";
@@ -65,6 +66,7 @@ export default function Veiculo() {
 
               <div className="infoVeiculo1">
                 <div className="especInfoVeiculo">
+                  <FaRoad className="goFile"/>
                   <p className="infoPergunta">Quilometragem:</p>
 
                   <p className="infoResposta">27.000km</p>
@@ -89,7 +91,6 @@ export default function Veiculo() {
               <p className="infoResposta">"O escapamento foi consertado"</p>
             </div>
             <Link className="btnManu">
-              {" "}
               <span className="editP">
                 Editar registros / Agendar manutenção
               </span>

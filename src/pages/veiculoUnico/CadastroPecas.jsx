@@ -12,18 +12,29 @@ import { GiBackwardTime } from "react-icons/gi";
 import "../../assets/Pecas.css";
 import { Link } from "react-router-dom";
 
-export default function CadastroPecas(){
-    return(
-        <div className="backgroundapp">
-            <Navbar/>
-            <main>
+export default function CadastroPecas() {
+  return (
+    <div className="backgroundapp">
+      <Navbar />
+      <main>
+        <div className="containerInfoPeca">
+          <div className="containerPeca">
+            <div className="containerPeca2">
+              <h1>Cadastrar tipo peças do veículo</h1>
 
-        
-
-
-
-            </main>
-
+              <div className="inputContainer">
+                <div className="boxInput">
+                  <p>Nome da peça</p>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+            <div className="containerBtn">
+              <button type="submit">Cadastrar</button>
+            </div>
+          </div>
         </div>
-    )
+      </main>
+    </div>
+  );
 }

@@ -1,10 +1,16 @@
-export default function Veiculos(){
+import React from "react";
+import "../../assets/notFound.css";
+
+export default function Veiculos() {
   {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>404 - Página não encontrada</h1>
-        </header>
+      <div className="body">
+        <div id="main">
+          <div class="fof">
+            <h1>Error 404</h1>
+            <h2>Página não encontrada</h2>
+          </div>
+        </div>
       </div>
     );
   }

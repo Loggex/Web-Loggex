@@ -15,7 +15,6 @@ import Veiculo from "./pages/veiculoUnico/veiculo";
 import Motorista from "./pages/MotoristaUnico/Motorista";
 import PerfilGestor from "./pages/PerfilGestor/Gestor";
 import Rota from "./pages/Rotas/Rota";
-import Motoristas from "./pages/MotoristaUnico/Motoristas";
 import CadastroPecas from "./pages/veiculoUnico/CadastroPecas";
 
 const routing = (
@@ -27,7 +26,6 @@ const routing = (
         <Route path="/veiculo" component={Veiculo} />
         <Route path="/Motorista" component={Motorista} />
         <Route path="/Rota" component={Rota} />
-        <Route path="/Motoristas" component={Motoristas} />
         <Route path="/Pecas" component={CadastroPecas} />
         <Route path="/Gestor" component={PerfilGestor} />
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}

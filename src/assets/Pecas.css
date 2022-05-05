@@ -1,24 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
-
-
-*{
-    padding: 0;
-    text-decoration: none;
-  }
-
-main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+  padding: 0;
+  text-decoration: none;
 }
 
-.backgroundapp{
-    background-color: #F3F0F0;
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.backgroundapp {
+  background-color: #f3f0f0;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.containerInfoPeca {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerPeca {
+  width: 50vw;
+  height: 40vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+  justify-content: space-around;
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerPeca h1 {
+  font-size: 31px;
+  font-family: "Sen", sans-serif;
+  font-weight: bold;
+}
+
+.containerPeca p {
+  font-family: "Sen", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.containerPeca input {
+  width: 88%;
+  height: 30px;
+  border-width: 1px;
+  border-radius: 13px;
+  padding-left: 10px;
+  font-family: "Sen", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.boxInput {
+  width: 60%;
+}
+
+.containerBtn {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+}
+
+
+.containerBtn button{
+  width: 40%;
+  background: #060657;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+
+}
+
+.containerPeca2{
+  width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
 }
