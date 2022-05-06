@@ -19,8 +19,8 @@ const history = useHistory();
     const onVeiculos = (e) => {
         history.push("/Veiculos");
       };
-    const onRota = (e) => {
-        history.push("/Rota");
+    const onRotas = (e) => {
+        history.push("/Rotas");
       };
     
 
@@ -40,7 +40,7 @@ const history = useHistory();
                 <Link to="/" className='navButton'><img src={home}/><span>Home</span></Link>
                 <Link onClick={onMotoristas} className='navButton'><img src={volante}/><span>Motoristas</span></Link>
                 <Link onClick={onVeiculos} className='navButton'><img src={truck}/><span>Veiculos</span></Link>
-                <Link onClick={onRota} className='navButton'><img src={rota}/><span>Rotas</span></Link>
+                <Link onClick={onRotas} className='navButton'><img src={rota}/><span>Rotas</span></Link>
                 </div>
                 <button className='botaoSair'><span>Sair</span><img src={logout}alt='icone de sair'></img></button>
             </section>

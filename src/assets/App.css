@@ -119,12 +119,8 @@
   height: 120px;
   border-radius: 50%;
   z-index: 1;
-<<<<<<< HEAD
   margin-top: 3%;
 
-=======
-  margin-top: 15%;
->>>>>>> origin/notFound
 }
 
 .sectionNav {
@@ -137,16 +133,11 @@
   flex-direction: column;
 }
 
-<<<<<<< HEAD
 .cardNav{
-=======
-.card {
->>>>>>> origin/notFound
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-<<<<<<< HEAD
   height: 150px ;
   background: linear-gradient(314.93deg, #060657 0%, rgba(6, 6, 87, 0.977774) 40.24%, rgba(6, 6, 87, 0.874491) 66.36%, rgba(6, 6, 87, 0.777824) 90.37%, rgba(6, 6, 87, 0.5) 121.5%);
 }
@@ -154,21 +145,6 @@
 
 .sectionNav h4{
   font-family: 'Sen', sans-serif;
-=======
-  height: 200px;
-  background: linear-gradient(
-    314.93deg,
-    #060657 0%,
-    rgba(6, 6, 87, 0.977774) 40.24%,
-    rgba(6, 6, 87, 0.874491) 66.36%,
-    rgba(6, 6, 87, 0.777824) 90.37%,
-    rgba(6, 6, 87, 0.5) 121.5%
-  );
-}
-
-.sectionNav h4 {
-  font-family: "Sen", sans-serif;
->>>>>>> origin/notFound
   font-weight: bold;
   font-size: 23px;
   margin-bottom: 10px;
@@ -260,13 +236,8 @@ h1 {
   font-size: 38px;
 }
 
-<<<<<<< HEAD
 .card{
   width: 750px;
-=======
-.cardCarro {
-  width: 700px;
->>>>>>> origin/notFound
   height: 160px;
   border-radius: 10px;
   background-color: white;
@@ -296,18 +267,11 @@ h1 {
   color: #757575;
 }
 
-<<<<<<< HEAD
 .nomeVeiculo{
   font-family: 'Sen', sans-serif;
 font-weight: bold;
 font-size: 24px;
 margin-top: 5px;
-=======
-.nomeVeiculo {
-  font-family: "Sen", sans-serif;
-  font-weight: bold;
-  font-size: 24px;
->>>>>>> origin/notFound
 }
 
 .infoVeiculo p {
@@ -338,13 +302,8 @@ margin-top: 5px;
   margin-top: 10px;
 }
 
-<<<<<<< HEAD
 .next{
   background-color: #0B0B5A;
-=======
-.sidebarVeiculo {
-  background-color: #0b0b5a;
->>>>>>> origin/notFound
   height: 100%;
   width: 50px;
   border-top-right-radius: 10px;
@@ -353,7 +312,6 @@ margin-top: 5px;
   align-items: center;
 }
 
-<<<<<<< HEAD
 .imgMotorista{
   width: 120px;
   height: 120px;
@@ -474,7 +432,7 @@ margin-top: 10px;
 
 }
 
-#backgroundStart main{
+.mainStart{
   height: 100%;
   width: 100%;
   display: flex;
@@ -530,7 +488,7 @@ margin-top: 10px;
 }
 
 #posBlob{
-  z-index: 1;
+  z-index: 3;
   width: 33%;
   display: flex;
   justify-content: center;
@@ -558,16 +516,3 @@ font-size: 21px;
 margin-right: 5px;
 text-decoration: none;
 }
-=======
-.login-eye {
-  align-items: center;
-  justify-content: center;
-  font-size: 30;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.loginBtn{
-  padding-top: 100px;
-}
->>>>>>> origin/notFound

@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 export default function Inicio(){
     return(
         <div id='backgroundStart'>
-            <main>
+            <main className='mainStart'>
                 <div id='posicaoTexto'>
                     <img src={semi} id='logoSemi' />
                     <div className='sloganImg'>

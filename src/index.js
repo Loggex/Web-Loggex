@@ -17,7 +17,7 @@ import Rota from "./pages/Rotas/Rota";
 import Veiculos from './pages/Veiculos/Veiculos';
 import Inicio from './pages/Início/inicio'
 import Motoristas from './pages/Motoristas/Motoristas';
-import Manutencoes from './pages/Manutenções/Manutencoes'
+import Rotas from './pages/Rotas/Rotas'
 import Login from './pages/Login/App'
 import CadastroPecas from "./pages/veiculoUnico/CadastroPecas";
 
@@ -28,13 +28,13 @@ const routing = (
 
       <Switch>
         <Route exact path="/" component={Inicio} />
-        <Route exact path="/" component={Login} />
+        <Route exact path="/Login" component={Login} />
         <Route path="/veiculos" component={Veiculos} />
         <Route path="/veiculo" component={Veiculo} />
         <Route path="/Motoristas" component={Motoristas} />
         <Route path="/Motorista" component={Motorista} />
-        <Route exact path="/login" component={Login}/>
         <Route path="/Rota" component={Rota} />
+        <Route path="/Rotas" component={Rotas} />
         <Route path="/Pecas" component={CadastroPecas} />
         <Route path="/Gestor" component={PerfilGestor} />
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
