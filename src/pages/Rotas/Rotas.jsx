@@ -6,22 +6,49 @@ import check from '../../assets/checkmark.svg'
 import chevron from '../../assets/chevronDir.svg'
 
 export default function Rotas(){
+    
+    const [ listaRotas, setListaRotas ] = useState( [] );
+
+
+
+    async function buscarRotas() {
+
+        await axios('http://192.168.4.112:5000/api/rotas', {
+            headers : {
+                'Authorization' : 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTE3NTA1MjksImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.Wua5aTBriMzua_xEOZ0JhwQsXgKrZusLWV_Nh1DvyLM"//localStorage.getItem('usuario-login')
+            }
+        })
+        .then(resposta => {
+            if (resposta.status === 200) {
+                setListaRotas(resposta.data)
+            }
+        } )
+
+        .catch(erro => console.log(erro));
+    };
+
+    useEffect( () =>{
+        buscarRotas();
+    });
     return(
         <div className='backgroundapp'>
             <Navbar></Navbar>
             <main>
                 <div className='posMain'>
                     <h1>Rotas</h1>
-
-                    <div className='card'>
+                    
+                    {
+                        listaRotas.map( (rotas) => {
+                            return(
+                        <div className='card'>
                         <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="imagem do carro" className='imgVeiculo'/>
                         <div className='infoRota'>
                             <img src={Route} alt="Imagem de Rota" />
                             <div className='textosRota'>
-                                <span className='rotaDestino'>Carapicuíba, SP</span>
-                                <span className='rotaDestino'>Ouro Fino, MG</span>
-                                <span className='rotaInfo'>Carga: Alimentos</span>
-                                <span className='rotaInfo'>Data: 12/03/2022</span>
+                                <span className='rotaDestino'>{rotas.origem}</span>
+                                <span className='rotaDestino'>{rotas.destino}</span>
+                                <span className='rotaInfo'>{rotas.carga}</span>
+                                <span className='rotaInfo'>{rotas.dataPartida}</span>
                                 
                             </div>
                         </div>
@@ -33,7 +60,9 @@ export default function Rotas(){
                             <img src={chevron} alt="" />
                         </div>
                     </div>
-
+                                )
+                                } )
+                            }
                     
                     
                 </div>
