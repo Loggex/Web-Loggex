@@ -20,6 +20,8 @@ import CadastroPecas from "./pages/veiculoUnico/CadastroPecas";
 const routing = (
   <Router>
     <div>
+      
+
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/veiculos" component={Veiculos} />
@@ -32,6 +34,7 @@ const routing = (
         <Redirect to="/notFound" />{" "}
         {/* Redireciona para Not Found caso não encontre nenhuma rota */}
       </Switch>
+      
     </div>
   </Router>
 );
