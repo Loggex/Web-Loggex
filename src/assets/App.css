@@ -516,3 +516,7 @@ font-size: 21px;
 margin-right: 5px;
 text-decoration: none;
 }
+
+.loginBtn{
+  padding-top: 100px;
+}
