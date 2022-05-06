@@ -2,15 +2,31 @@ import React from 'react';
 import '../assets/App.css';
 import logo from '../assets/logobranco.svg'
 import home from '../assets/home.svg'
-import manutencao from '../assets/manutencao.svg'
 import volante from '../assets/steering.svg'
 import rota from '../assets/rota.svg'
 import truck from '../assets/truck.svg'
 import logout from '../assets/logout.svg'
 import {Link} from 'react-router-dom'
+import { useHistory } from 'react-router';
 
 
 export default function Navbar(){
+const history = useHistory();
+    
+    const onMotoristas = (e) => {
+        history.push("/Motoristas");
+      };
+    const onVeiculos = (e) => {
+        history.push("/Veiculos");
+      };
+    const onRota = (e) => {
+        history.push("/Rota");
+      };
+    
+
+
+
+
     return(
         <div id="FundoNavbar">
             <div className='cardNav'>
@@ -21,11 +37,10 @@ export default function Navbar(){
                 <h4>Nome do Usuário</h4>
                 <span className='subtitulonav'>Gestor de frotas</span>
                 <div className='botoes'>
-                <Link to="/" className='navButton'><img src={home} alt='icone de home'/><span>Home</span></Link>
-                <Link to="/motoristas" className='navButton'><img src={volante} alt='icone de motoristas'/><span>Motoristas</span></Link>
-                <Link to="/veiculos" className='navButton'><img src={truck} alt='icone de veiculos'/><span>Veiculos</span></Link>
-                <Link to="/rotas" className='navButton'><img src={rota} alt='icone de rotas'/><span>Rotas</span></Link>
-                <Link to="/manutencoes" className='navButton'><img src={manutencao}alt='icone de manutenções'/><span>Manutenções</span></Link>
+                <Link to="/" className='navButton'><img src={home}/><span>Home</span></Link>
+                <Link onClick={onMotoristas} className='navButton'><img src={volante}/><span>Motoristas</span></Link>
+                <Link onClick={onVeiculos} className='navButton'><img src={truck}/><span>Veiculos</span></Link>
+                <Link onClick={onRota} className='navButton'><img src={rota}/><span>Rotas</span></Link>
                 </div>
                 <button className='botaoSair'><span>Sair</span><img src={logout}alt='icone de sair'></img></button>
             </section>

@@ -3,6 +3,9 @@ import axios from 'axios';
 import Navbar from '../../Components/Navbar';
 import check from '../../assets/checkmark.svg'
 import chevron from '../../assets/chevronDir.svg'
+import { useHistory } from 'react-router'; 
+
+import '../../assets/App.css'
 
 export default function Veiculos(){
 
@@ -33,6 +36,15 @@ export default function Veiculos(){
     function maisRecenteDesc(objeto){
         return objeto.reduce((prev, current) => (prev.idManutencao > current.idManutencao) ? prev : current)   
      }
+    const history = useHistory();
+
+    const onVeiculo = (e) => {
+        history.push("/Veiculo");
+      };
+
+    
+ 
+    
 
 
     return(
