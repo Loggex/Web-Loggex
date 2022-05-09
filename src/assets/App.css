@@ -488,6 +488,9 @@ margin-top: 10px;
 }
 
 #posBlob{
+  position: fixed;
+  right: 0;
+  bottom: 200px;
   z-index: 3;
   width: 33%;
   display: flex;
@@ -503,7 +506,7 @@ margin-top: 10px;
   border-radius: 10px;
   align-items: center;
   width: 40%;
-  height: 8%;
+  height: 5vh;
   margin-top: 20px;
   justify-content: center;
 }
