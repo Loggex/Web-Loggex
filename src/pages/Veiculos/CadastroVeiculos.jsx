@@ -24,6 +24,10 @@ export default function CadastroVeiculos(){
                                         <h3>Ano de Fabricação</h3>
                                         <input type="text" />
                                         </div>
+                                        <div className="inputDivV">
+                                            <h3>Modelo do veículo</h3>
+                                            <input type="text" />
+                                        </div>
                                     </div>
                                     <div className="formColunaV">
                                         <div className="inputDivV">
@@ -41,14 +45,14 @@ export default function CadastroVeiculos(){
                                         <h3>Quilometragem</h3>
                                         <input type="text" />
                                         </div>
+                                        <div className="inputDivV" id="estadoVeiculo">
+                                            <h3>Estado do Veículo</h3>
+                                            <select name="estadoVeiculo" id="">
+                                                <option value="true">Funcional</option>
+                                                <option value="false">Quebrado</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="inputDivV" id="estadoVeiculo">
-                                    <h3>Estado do Veículo</h3>
-                                    <select name="estadoVeiculo" id="">
-                                        <option value="true">Funcional</option>
-                                        <option value="false">Quebrado</option>
-                                    </select>
                                 </div>
                                 <input value="Cadastrar" type="submit" name="cadastrar" id="botaoCadastrar" />
                             </form>
