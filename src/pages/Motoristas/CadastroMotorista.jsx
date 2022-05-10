@@ -22,23 +22,13 @@ export default function CadastroMotorista(){
 
         setIsLoading(true);
 
-        if(senhaInput === confirmSenhaInput){
 
             axios.post('http://localhost:5000/api/motorista', {
-    
-                nome: nomeInput,
-                cpf: cpfInput,
                 cnh: cnhInput,
-                sexo: sexoInput,
-                email: emailInput,
-                senha: senhaInput,
-                imgPerfil: imgPerfilInput,
-                numCelular: celInput
-    
             }, {
                 headers: {
-                    //'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
-                    'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIxMDM0NTcsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.s5YxTqVrgD025rlCLq4Ldhg5Fnm6jTFpyo8VYr4tvII'
+                    'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+                    // 'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIxMDM0NTcsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.s5YxTqVrgD025rlCLq4Ldhg5Fnm6jTFpyo8VYr4tvII'
                 }
             })
                 .then(resposta => {
@@ -60,9 +50,7 @@ export default function CadastroMotorista(){
                 .catch(erro => console.log(erro), setInterval(() => {
                     setIsLoading(false)
                 }, 5000));
-        }else{
-            console.log("Confirme a sua senha");
-        }
+        
     };
 
     return(

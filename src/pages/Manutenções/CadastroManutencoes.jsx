@@ -1,6 +1,10 @@
 import Navbar from "../../Components/Navbar";
 import usuarioIndef from "../../assets/Ellipse 1.svg"
 import "../../assets/cadastroMotorista.css";
+import { useState } from "react";
+import axios from "axios";
+
+
 
 export default function CadastroMotorista(){
     return(

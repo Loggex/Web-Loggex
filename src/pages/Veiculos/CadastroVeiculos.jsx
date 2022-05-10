@@ -35,8 +35,7 @@ export default function CadastroVeiculos(){
 
         }, {
             headers: {
-                //'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
-                'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIxMDM0NTcsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.s5YxTqVrgD025rlCLq4Ldhg5Fnm6jTFpyo8VYr4tvII'
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
             .then(resposta => {
@@ -72,7 +71,7 @@ export default function CadastroVeiculos(){
                                     <div className="formColunaV">
                                         <div className="inputDivV">
                                         <h3>Placa</h3>
-                                        <input type="text" onChange={ (campo) => setTipo(campo.target.value) } />
+                                        <input type="text" onChange={ (campo) => setPlaca(campo.target.value) } />
                                         </div>
                                         <div className="inputDivV">
                                         <h3>Cor</h3>
@@ -83,8 +82,8 @@ export default function CadastroVeiculos(){
                                         <input type="text" onChange={ (campo) => setAno(campo.target.value) } />
                                         </div>
                                         <div className="inputDivV">
-                                            <h3>Modelo do veículo</h3>
-                                            <input type="text" />
+                                            <h3>ID do tipo de veículo</h3>
+                                            <input type="text" onChange={ (campo) => setTipo(campo.target.value) }/>
                                         </div>
                                     </div>
                                     <div className="formColunaV">
