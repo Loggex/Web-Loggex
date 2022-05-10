@@ -20,6 +20,10 @@ import Rotas from './pages/Rotas/Rotas'
 import Login from './pages/Login/App'
 import CadastroPecas from "./pages/veiculoUnico/CadastroPecas";
 import Manutencoes from "./pages/Manutenções/Manutencoes";
+import CadastroVeiculos from './pages/Veiculos/CadastroVeiculos';
+import CadastroMotorista from './pages/Motoristas/CadastroMotorista';
+import CadastroRotas from '../src/pages/Rotas/CadastroRotas'
+import CadastroManutencoes from './pages/Manutenções/CadastroManutencoes';
 
 const routing = (
   <Router>
@@ -38,6 +42,10 @@ const routing = (
         <Route path="/Pecas" component={CadastroPecas} />
         <Route path="/Gestor" component={PerfilGestor} />
         <Route path="Manutencoes" component={Manutencoes} />
+        <Route path="/CadastroVeiculos" component={CadastroVeiculos}/>
+        <Route path="/CadastroMotorista" component={CadastroMotorista}/>
+        <Route path="/CadastroRotas" component={CadastroRotas}/>
+        <Route path="/CadastroManutencoes" component={CadastroManutencoes}/>
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" />{" "}
         {/* Redireciona para Not Found caso não encontre nenhuma rota */}

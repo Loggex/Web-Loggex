@@ -17,11 +17,7 @@ export default function Veiculos(){
 
         await axios('https://f1ba-189-19-219-247.sa.ngrok.io/api/motoristas', {
             headers : {
-<<<<<<< HEAD
-                'Authorization' : 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTE4NDYxMzAsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.cuTrLxTFaSOkCnoPxgsVVIUoVW0NY15BWAKiwz3fNI8"//localStorage.getItem('usuario-login')
-=======
                 'Authorization' : 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIwOTUzNjYsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.SH9djKupJk8tU7GsssBfwvK5I1ydboQvV118XecXqoU"//localStorage.getItem('usuario-login')
->>>>>>> origin/notFound
             }
         })
         .then(resposta => {
