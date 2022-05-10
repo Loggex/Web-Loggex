@@ -1,25 +1,69 @@
 import "../../assets/App.css";
 import logo from "../../assets/logo.svg";
 import password from "../../assets/password.svg";
-import email from "../../assets/email.svg";
+import emailImage from "../../assets/email.svg";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { HiEye, HiEyeOff } from "react-icons/hi";
+import { parseJwt } from "../../Services/auth";
+import api from "../../Services/api";
 
 export default function App() {
   const history = useHistory();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [show, setShow] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [erroMensagem, setErroMensagem] = useState("");
 
   const handleClick = (e) => {
     e.preventDefault();
     setShow(!show);
   };
-
+  /* 
   const onsubmit = (e) => {
-    history.push("/Motorista");
-  };
+    history.push("/Motoristas");
+  }; */
+
+  function EfetuarLogin(e) {
+    e.preventDefault();
+    setErroMensagem("");
+    setIsLoading(true);
+
+    api
+      .post("/Login", {
+        email: email,
+        senha: senha,
+      })
+
+      .then((response) => {
+        if (response.status === 200) {
+          localStorage.setItem("usuario-login", response.data.token);
+
+          setSenha("");
+
+          setEmail("");
+
+          setIsLoading(false);
+
+          if (parseJwt().role === "1") {
+            history.push("/Motoristas");
+          }
+          if (parseJwt().role === "2") {
+            history.push("/Motoristas");
+          }
+        }
+      })
+      .catch((erro) => {
+        console.log(erro);
+
+        // setSenha('')
+
+        setErroMensagem("E-mail e/ou Senha inválidos");
+
+        setIsLoading(false);
+      });
+  }
 
   return (
     <div className="App">
@@ -27,12 +71,12 @@ export default function App() {
         <div className="cardLogin">
           <img src={logo} alt="Logo do loggex" className="logoLogin" />
           <h1>Acesse sua conta</h1>
-          <form className="formLogin">
+          <form onSubmit={EfetuarLogin} className="formLogin">
             <div className="campoLoginE">
-              <img src={email} alt="Ilustração de email"></img>
+              <img src={emailImage} alt="Ilustração de email"></img>
               <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 className="inputLogin"
                 type="email"
                 placeholder="Email"
@@ -59,11 +103,27 @@ export default function App() {
               <a href="">Esqueceu sua senha?</a>
             </div>
             <div className="loginBtn">
-              <a href="/veiculos">
-                <button onClick={onsubmit} className="botao">
+              <span className="red">
+                {erroMensagem === "" ? "" : "Email ou senha inválidos"}
+              </span>
+              {isLoading === true && (
+                <button
+                  type="submit"
+                  disabled
+                  className="botao"
+                >
+                  Carregando...
+                </button>
+              )}
+              {isLoading === false && (
+                <button
+                  disabled={email === "" || senha === "" ? "none" : ""}
+                  type="submit"
+                  className="botao"
+                >
                   Entrar
                 </button>
-              </a>
+              )}
             </div>
           </form>
         </div>

@@ -19,6 +19,7 @@ import Motoristas from './pages/Motoristas/Motoristas';
 import Rotas from './pages/Rotas/Rotas'
 import Login from './pages/Login/App'
 import CadastroPecas from "./pages/veiculoUnico/CadastroPecas";
+import Manutencoes from "./pages/Manutenções/Manutencoes";
 
 const routing = (
   <Router>
@@ -36,6 +37,7 @@ const routing = (
         <Route path="/Rotas" component={Rotas} />
         <Route path="/Pecas" component={CadastroPecas} />
         <Route path="/Gestor" component={PerfilGestor} />
+        <Route path="Manutencoes" component={Manutencoes} />
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" />{" "}
         {/* Redireciona para Not Found caso não encontre nenhuma rota */}

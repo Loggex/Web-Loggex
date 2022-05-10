@@ -26,15 +26,14 @@ main{
 .NomeVeiculo{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .boxVeiculo{
     width: 100%;
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
 }
 
 .boxVeiculo img{
@@ -43,15 +42,15 @@ main{
 
 .containerInfoVeiculo{
     width: 100%;
-    height: 60vh;
+    height: 66vh;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .containerVeiculo{
     width: 54vw;
-    height: 60vh;
+    height: 66vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -63,7 +62,7 @@ main{
 
 .boxcontainerveiculo{
     width: 100%;
-    height: 90px;
+    height: 66px;
     display: flex;
     justify-content: center;
 
@@ -93,6 +92,11 @@ main{
     font-family: 'Sen', sans-serif;
     padding-left: 8px;
 }
+.infoRespostaChassi{
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 8px;
+}
 
 
 .especInfoVeiculo{
@@ -110,7 +114,7 @@ main{
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    width: 81%;
+    width: 94%;
 
 
 }
@@ -126,7 +130,7 @@ main{
 }
 
 .infoVeiculo1{
-    width: 25vw;
+    width: 27vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -163,6 +167,11 @@ main{
     padding-left: 30px;
 
 }
+.goFileChassi{
+    height: 30px;
+    width: 15%;
+
+}
 .goFilePlaca{
     height: 30px;
     width: 15%;
@@ -184,10 +193,10 @@ main{
 
 }
 
-.goColor{
+.goColorVei{
     height: 30px;
-    width: 25%;
-    padding-left: 30px;
+    width: 15%;
+    padding-left: 20px;
 }
 
 .goOp{
