@@ -48,7 +48,7 @@ export default function Motorista() {
 
                         <div className="containerMotorista2">
                             <div className="infoMotorista1">
-                                <div className="infoVei">
+                                <div className="infoMot">
 
 
 
@@ -57,28 +57,28 @@ export default function Motorista() {
                                         <p className="infoTitulo">Dados do Motorista:</p>
                                     </div>
                                     <div className="especInfoVeiculo">
-                                        <MdOutlineCheckCircle className="goFile" />
+                                        <MdOutlineCheckCircle className="goFileMot" />
 
                                         <p className="infoPergunta">Operacional:</p>
 
                                         <p className="infoResposta">Sim</p>
                                     </div>
                                     <div className="especInfoVeiculo">
-                                        <AiOutlineMail className="goFile" />
+                                        <AiOutlineMail className="goFileMot" />
 
                                         <p className="infoPergunta">Email:</p>
 
                                         <p className="infoResposta">Jojo@email.com</p>
                                     </div>
                                     <div className="especInfoVeiculo">
-                                        <AiOutlineMail className="goFile" />
+                                        <AiOutlineMail className="goFileMot" />
 
                                         <p className="infoPergunta">CPF:</p>
 
                                         <p className="infoResposta">12345678</p>
                                     </div>
                                     <div className="especInfoVeiculo">
-                                        <GiSmartphone className="goFile" />
+                                        <GiSmartphone className="goFileMot" />
 
                                         <p className="infoPergunta">Telefone:</p>
 

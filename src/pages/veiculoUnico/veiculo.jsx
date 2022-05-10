@@ -16,6 +16,8 @@ import { Link } from "react-router-dom";
 export default function Veiculo() {
   const [nomeVeiculo, setNomeVeiculo] = useState("");
 
+  
+
 
 
 
@@ -72,16 +74,16 @@ export default function Veiculo() {
                   <p className="infoResposta">27.000km</p>
                 </div>
                 <div className="especInfoVeiculo">
-                  <BiColorFill className="goColor" />
+                  <BiColorFill className="goColorVei" />
                   <p className="infoPergunta">Cor:</p>
 
                   <p className="infoResposta">Vermelho</p>
                 </div>
                 <div className="especInfoChassi">
-                  <IoMdCar className="goFile" />
+                  <IoMdCar className="goFileChassi" />
                   <p className="infoPerguntaChassi">Chassi:</p>
 
-                  <p className="infoResposta">3AA eAG510 2c 6B1818</p>
+                  <p className="infoRespostaChassi">3AA eAG510 2c 6B1818</p>
                 </div>
               </div>
             </div>

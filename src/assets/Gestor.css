@@ -47,7 +47,7 @@ main{
     height: 600px;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 30 px;
 }
 
 .containerGestor{
@@ -76,11 +76,18 @@ main{
     font-size: 24px;
     padding-left: 15px;
 }
-.infoTitulo{
+.infoPerguntaTel{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 10px;
+}
+.infoTituloGest{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
     font-size: 40px;
     padding-left: 15px;
+    margin: 0;
 }
 .infoPerguntaExato{
     font-family: 'Sen', sans-serif;
@@ -110,7 +117,8 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
+    width: 100%;
 
 }
 
@@ -140,18 +148,18 @@ main{
     align-items: center;
 }
 
-.goFile{
+.goFileGest{
     height: 30px;
     width: 15%;
     padding-left: 30px;
 
 }
-.goFilePlaca{
-    height: 30px;
-    width: 14%;
-    padding-left: 30px;
-
+.goFileGestph{
+    height: 35px;
+    width: 5vh;
+    padding-left: 24px;
 }
+
 
 
 
@@ -173,7 +181,7 @@ main{
 }
 
 .infoVei{
-    width: 56%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;

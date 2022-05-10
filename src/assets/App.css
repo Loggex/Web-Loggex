@@ -520,3 +520,11 @@ text-decoration: none;
 .loginBtn{
   padding-top: 100px;
 }
+
+.red{
+  color:  red;
+}
+
+.login-eye{
+  cursor: pointer;
+}
