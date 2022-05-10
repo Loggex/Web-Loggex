@@ -1,95 +1,57 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import Navbar from "../../Components/Navbar";
-import { GoNote } from "react-icons/go";
-import { MdOutlineCheckCircle } from "react-icons/md";
-import { IoCalendarOutline } from "react-icons/io5";
-import { BiMessageCheck } from "react-icons/bi";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdCar } from "react-icons/io";
-import { GiBackwardTime } from "react-icons/gi";
+import { useHistory } from "react-router";
 
-import api from "../../Services/api"
+import api from "../../Services/api";
 
 import "../../assets/Pecas.css";
-import { Link } from "react-router-dom";
 
 export default function CadastroPecas() {
+  const initialValue = {
+    nomePeca: "",
+  };
   const [nomePeca, setNomePeca] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [idTipoPeca, setIdTipoPeca] = useState(0)
+  const [idTipoPeca, setIdTipoPeca] = useState(0);
 
+  const PromotionForm = () => {
+    const [values, setValues] = useState(initialValue);
+    const history = useHistory();
 
-  // função responsável por fazer a requisição que cadastra um novo tipo de usuário
-  function cadastrarTipoPecas(evento) {
-    // evita o comportamento padrão do navegador
-    evento.preventDefault();
+    function onChange(ev) {
+      const { name, value } = ev.target;
 
-    // define que uma requisição está em andamento
-    setIsLoading( true );
-
-    if (listaTiposPecas) {
-        // verifica se existe na lista algum tipo de usuário igual ao que está sendo passado pelo usuário
+      setValues({ ...values, [name]: value });
     }
-    
-    // faz a chamada para a API
-    axios.post('http://192.168.3.169:5000/api/TiposPecas', {
-        nomePeca : nomePeca
-    }, {
-        /* headers : {
-            'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
-        } */
-    })
-    .then(resposta => {
-        // se o status code da resposta da requisição for igual a 201
-        if (resposta.status === 201) {
-            // exibe a mensagem no console do navegador,
-            console.log('Tipo de peca cadastrado!');
-            // atualiza a lista de tipos de usuário automaticamente,
-            buscarTiposPecas();
-            // reseta o valor do state titulo,
-            setNomePeca('');
-            // e volta o valor do state isLoading para false
-            setIsLoading( false );
-        }
-    })
-    // caso ocorra algum erro, exibe no console do navegador este erro
-    // e volta o valor do state isLoading para false
-    .catch(erro => console.log(erro), setInterval(() => {
-        setIsLoading( false )
-    }, 5000));
-};
 
-// exibe no console o valor do state titulo a cada alteração feita pelo usuário
-console.log(nomePeca);
+    return (
+      <div className="backgroundapp">
+        <Navbar />
+        <main>
+          <div className="containerInfoPeca">
+            <div className="containerPeca">
+              <div className="containerPeca2">
+                <h1>Cadastrar tipo peças do veículo</h1>
 
-  return (
-    <div className="backgroundapp">
-      <Navbar />
-      <main>
-        <div className="containerInfoPeca">
-          <div className="containerPeca">
-            <div className="containerPeca2">
-              <h1>Cadastrar tipo peças do veículo</h1>
-
-              <div className="inputContainer">
-                <div className="boxInput">
-                  <p>Nome da peça</p>
-                  <input
-                   type="text"
-                   placeholder="Nome da peça"
-                   value={nomePeca}
-                   onChange={(campo) => setNomePeca(campo.target.value)}
-                   />
+                <div className="inputContainer">
+                  <div className="boxInput">
+                    <p>Nome da peça</p>
+                    <input
+                      type="text"
+                      placeholder="Nome da peça"
+                      onChange={onChange}
+                      value={nomePeca}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="containerBtn">
-              <button type="submit">Cadastrar</button>
+              <div className="containerBtn">
+                <button type="submit">Cadastrar</button>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
-  );
+        </main>
+      </div>
+    );
+  };
 }

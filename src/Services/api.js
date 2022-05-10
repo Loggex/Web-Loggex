@@ -4,7 +4,7 @@ import axios from 'axios';
 // define a função para chamada das requisições
 const api = axios.create({
   // define a URL base das requisições
-  baseURL: 'http://192.168.3.169:5000/api',
+  baseURL: 'http://localhost:5000/api',
 
 });
 

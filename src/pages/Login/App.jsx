@@ -31,7 +31,7 @@ export default function App() {
     setIsLoading(true);
 
     api
-      .post("/Login", {
+      .post("http://192.168.3.169:5000/api/Login/Gerente", {
         email: email,
         senha: senha,
       })
@@ -47,10 +47,10 @@ export default function App() {
           setIsLoading(false);
 
           if (parseJwt().role === "1") {
-            history.push("/Motoristas");
+            history.push("http://192.168.3.169:5000/api/Motoristas");
           }
           if (parseJwt().role === "2") {
-            history.push("/Motoristas");
+            history.push("http://192.168.3.169:5000/api/Motoristas");
           }
         }
       })
@@ -93,9 +93,9 @@ export default function App() {
               />
               <div className="login-eye">
                 {show ? (
-                  <HiEye Size={20} onClick={handleClick} />
+                  <HiEye className="eye" onClick={handleClick} />
                 ) : (
-                  <HiEyeOff Size={20} onClick={handleClick} />
+                  <HiEyeOff className="eye" onClick={handleClick} />
                 )}
               </div>
             </div>

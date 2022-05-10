@@ -1,37 +1,25 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../../Components/Navbar";
-import check from "../../assets/checkmark.svg";
-import chevron from "../../assets/chevronDir.svg";
-import { GoNote } from "react-icons/go";
-import { MdOutlineCheckCircle } from "react-icons/md";
-import { IoCalendarOutline } from "react-icons/io5";
-import { BiMessageCheck } from "react-icons/bi";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdCar } from "react-icons/io";
-import { GiBackwardTime } from "react-icons/gi";
 import { GiSmartphone } from "react-icons/gi";
 import { AiOutlineMail } from "react-icons/ai";
-import api from "../../Services/api"
+import api from "../../Services/api";
+import { parseJwt } from "../../Services/auth";
 
 import "../../assets/Gestor.css";
-import { Link } from "react-router-dom";
 
 export default function Gestor() {
-    function listar() {
-        api('/Alunos/sala/1')
-          .then(resposta => {
-            if (resposta.status === 200) {
-              console.log('Lista')
-              console.log(resposta)
-              setListaAlunos(resposta.data)
-            }
-          })
-          .catch(erro => console.log(erro))
-      }
-    
-      useEffect(listarAlunos, []);
-  
+  const [usuarioLogado, setUsuarioLogado] = useState({});
+
+  async function BuscarUsuario() {
+    const usuario = await parseJwt();
+
+    const requisicao = await api.get('/usuarios/${usuario.jti}');
+
+    setUsuarioLogado(requisicao.data);
+  }
+
+  useEffect(BuscarUsuario, [])
 
   return (
     <div className="backgroundapp">
@@ -45,7 +33,7 @@ export default function Gestor() {
           />
         </div>
         <div className="boxcontainerGestor">
-          <h1 className="NomeGestor">Nome do Gestor</h1>
+          <h1 className="NomeGestor">Nome gestor</h1>
         </div>
 
         <div className="containerInfoGestor">

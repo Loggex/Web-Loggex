@@ -38,7 +38,7 @@ const routing = (
         <Route path="/Rotas" component={Rotas} />
         <Route path="/Pecas" component={CadastroPecas} />
         <Route path="/Gestor" component={PerfilGestor} />
-        <Route path="Manutencoes" component={Manutencoes} />
+        <Route path="/Manutencoes" component={Manutencoes} />
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" />{" "}
         {/* Redireciona para Not Found caso não encontre nenhuma rota */}

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import Navbar from "../../Components/Navbar";
 import { GoNote } from "react-icons/go";
 import { MdOutlineCheckCircle } from "react-icons/md";
@@ -14,7 +13,6 @@ import "../../assets/Veiculo.css";
 import { Link } from "react-router-dom";
 
 export default function Veiculo() {
-  const [nomeVeiculo, setNomeVeiculo] = useState("");
 
   
 
