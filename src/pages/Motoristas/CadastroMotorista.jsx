@@ -24,11 +24,11 @@ export default function CadastroMotorista(){
 
         if(senhaInput === confirmSenhaInput){
 
-            axios.post('http://localhost:5000/api/veiculos', {
+            axios.post('http://localhost:5000/api/motorista', {
     
                 nome: nomeInput,
-                placa: cpfInput,
-                anoFabricacao: cnhInput,
+                cpf: cpfInput,
+                cnh: cnhInput,
                 sexo: sexoInput,
                 email: emailInput,
                 senha: senhaInput,

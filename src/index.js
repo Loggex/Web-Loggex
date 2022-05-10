@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './pages/Login/App';
+import App from './pages/Login/App.jsx';
 import Veiculos from './pages/Veiculos/Veiculos';
 import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
