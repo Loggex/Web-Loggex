@@ -28,17 +28,14 @@ export default function CadastroPecas() {
     // define que uma requisição está em andamento
     setIsLoading( true );
 
-    if (listaTiposPecas) {
-        // verifica se existe na lista algum tipo de usuário igual ao que está sendo passado pelo usuário
-    }
     
     // faz a chamada para a API
-    axios.post('http://192.168.3.169:5000/api/TiposPecas', {
+    axios.post('http://localhost:5000/api/tipospecas', {
         nomePeca : nomePeca
     }, {
-        /* headers : {
+         headers : {
             'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
-        } */
+        } 
     })
     .then(resposta => {
         // se o status code da resposta da requisição for igual a 201
@@ -46,7 +43,6 @@ export default function CadastroPecas() {
             // exibe a mensagem no console do navegador,
             console.log('Tipo de peca cadastrado!');
             // atualiza a lista de tipos de usuário automaticamente,
-            buscarTiposPecas();
             // reseta o valor do state titulo,
             setNomePeca('');
             // e volta o valor do state isLoading para false

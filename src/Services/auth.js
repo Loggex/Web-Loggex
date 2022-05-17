@@ -1,3 +1,7 @@
+
+
+
+
 export const usuarioAutenticado = () => localStorage.getItem('usuario-login') !== null
 
 export const parseJwt = () => {

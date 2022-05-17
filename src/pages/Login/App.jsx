@@ -80,12 +80,12 @@ export default function App() {
           <img src={logo} alt="Logo do loggex"className="logoLogin"/>
           <h1>Acesse sua conta</h1>
           <form onSubmit={login} className="formLogin">
-            <div className="campoLogin">
+            <div className="campoLoginE">
               <img src={emailImg} alt='Ilustração de email'></img>
               <input className="inputLogin" type="email"placeholder="Email" onChange={(campo) => setEmail(campo.target.value)}></input>
               
             </div>
-            <div className="campoLogin">
+            <div className="campoLoginP">
               <img src={password} alt='Ilustração de senha'></img>
               <input className="inputLogin" onChange={(campo) => setSenha(campo.target.value)} type="password"placeholder="Senha"></input>
             </div>

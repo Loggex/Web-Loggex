@@ -13,9 +13,9 @@ export default function Rotas(){
 
     async function buscarRotas() {
 
-        await axios('http://192.168.3.169:5000/api/rotas', {
+        await axios('http://localhost:5000/api/rotas', {
             headers : {
-                'Authorization' : 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIwOTg1MjUsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.3B4YJ2vBXmHaKwAPm6mVFLejBXv5Up1MP5DdDpFySZc"//localStorage.getItem('usuario-login')
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
         .then(resposta => {
@@ -33,7 +33,7 @@ export default function Rotas(){
     return(
         <div className='backgroundapp'>
             <Navbar></Navbar>
-            <main>
+            <main className='mainlista'>
                 <div className='posMain'>
                     <h1>Rotas</h1>
                     

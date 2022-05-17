@@ -15,9 +15,9 @@ export default function Veiculos(){
 
     async function buscarVeiculos() {
 
-        await axios('https://f1ba-189-19-219-247.sa.ngrok.io/api/motoristas', {
+        await axios('http://localhost:5000/api/veiculos', {
             headers : {
-                'Authorization' : 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIwOTUzNjYsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.SH9djKupJk8tU7GsssBfwvK5I1ydboQvV118XecXqoU"//localStorage.getItem('usuario-login')
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
         .then(resposta => {
@@ -26,7 +26,10 @@ export default function Veiculos(){
             }
         } )
 
-        .catch(erro => console.log(erro));
+        .catch(erro => 
+            console.log(erro)
+
+            );
     };
 
     useEffect( () =>{
@@ -34,8 +37,11 @@ export default function Veiculos(){
     });
 
     function maisRecenteDesc(objeto){
-        return objeto.reduce((prev, current) => (prev.idManutencao > current.idManutencao) ? prev : current)   
-     }
+        if (objeto.length >0)
+{        return objeto.reduce((prev, current) => (prev.idManutencao > current.idManutencao) ? prev : current).descricao   
+}    else{
+    return null
+} }
     const history = useHistory();
 
     const onVeiculo = (e) => {
@@ -50,7 +56,7 @@ export default function Veiculos(){
     return(
         <div className='backgroundapp'>
             <Navbar></Navbar>
-            <main>
+            <main className='mainlista'>
                 <div className='posMain'>
                     <h1>Veículos</h1>
 
@@ -64,7 +70,7 @@ export default function Veiculos(){
                             <span className='textoVeiculo'>{veiculo.quilometragem}</span>
                             <p>
                             </p>
-                            <span className='textoVeiculo'>{maisRecenteDesc(veiculo.manutencos).descricao}</span>
+                            <span className='textoVeiculo'>{maisRecenteDesc(veiculo.manutencos)}</span>
                         </div>
                         <div className='estadoVeiculo'>
                             <span>Operante</span>

@@ -19,9 +19,9 @@ export default function Motoristas() {
 
     async function buscarMotoristas() {
 
-        await axios('https://bdef-189-19-219-247.sa.ngrok.io/api/motoristas', {
+        await axios('http://localhost:5000/api/motoristas', {
             headers: {
-                'Authorization': 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlbWVsb0BlbWFpbC5jb20iLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMSIsIlRlbGVmb25lIjoiMTE5ODc2NTQzMjEiLCJleHAiOjE2NTIwOTg1MjUsImlzcyI6IkxvZ2dleC53ZWJBUEkiLCJhdWQiOiJMb2dnZXgud2ViQVBJIn0.3B4YJ2vBXmHaKwAPm6mVFLejBXv5Up1MP5DdDpFySZc"//localStorage.getItem('usuario-login')
+                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
             .then(resposta => {
@@ -39,14 +39,14 @@ export default function Motoristas() {
     return (
         <div className='backgroundapp'>
             <Navbar></Navbar>
-            <main>
+            <main className='mainlista'>
                 <div className='posMain'>
                     <h1>Motoristas</h1>
                     {
                         listaMotorista.map((motorista) => {
                             return (
                                 <div className='card'  key={motorista.idMotorista}>
-                                    <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="imagem do motorista" className='imgMotorista' />
+                                    <img src={'http://localhost:5000/StaticFiles/Images/' + motorista.idUsuarioNavigation.imgPerfil} alt="imagem do motorista" className='imgMotorista' />
 
                                     <div className='posMotorista'>
                                         <div className='infoMotorista'>
