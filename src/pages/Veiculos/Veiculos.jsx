@@ -36,12 +36,6 @@ export default function Veiculos(){
         buscarVeiculos();
     });
 
-    function maisRecenteDesc(objeto){
-        if (objeto.length >0)
-{        return objeto.reduce((prev, current) => (prev.idManutencao > current.idManutencao) ? prev : current).descricao   
-}    else{
-    return null
-} }
     const history = useHistory();
 
     const onVeiculo = (e) => {
@@ -70,7 +64,7 @@ export default function Veiculos(){
                             <span className='textoVeiculo'>{veiculo.quilometragem}</span>
                             <p>
                             </p>
-                            <span className='textoVeiculo'>{maisRecenteDesc(veiculo.manutencos)}</span>
+                            <span className='textoVeiculo'>{veiculo.descricao}</span>
                         </div>
                         <div className='estadoVeiculo'>
                             <span>Operante</span>

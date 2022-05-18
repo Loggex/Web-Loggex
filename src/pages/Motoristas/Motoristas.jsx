@@ -51,9 +51,8 @@ export default function Motoristas() {
                                     <div className='posMotorista'>
                                         <div className='infoMotorista'>
                                             <span className='nomeVeiculo'>{motorista.idUsuarioNavigation.nome}</span>
-                                            <span className='textoVeiculo'>{motorista.idUsuarioNavigation.numCelular}</span>
+                                            <span className='textoVeiculo'>{motorista.numCelular}</span>
                                         </div>
-                                        <span id='emailMotorista'>{'('+motorista.idUsuarioNavigation.email+')'}</span>
                                     </div>
                                     <div className='next' onClick={onSubmit}>
                                         <img src={chevron} alt="" />
