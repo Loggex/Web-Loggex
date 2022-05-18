@@ -24,7 +24,7 @@ import CadastroVeiculos from './pages/Veiculos/CadastroVeiculos';
 import CadastroMotorista from './pages/Motoristas/CadastroMotorista';
 import CadastroRotas from '../src/pages/Rotas/CadastroRotas'
 import CadastroManutencoes from './pages/Manutenções/CadastroManutencoes';
-
+import checklist from './pages/Veiculos/ChecklistPecas';
 const routing = (
   <Router>
     <div>
@@ -46,6 +46,7 @@ const routing = (
         <Route path="/CadastroMotorista" component={CadastroMotorista}/>
         <Route path="/CadastroRotas" component={CadastroRotas}/>
         <Route path="/CadastroManutencoes" component={CadastroManutencoes}/>
+        <Route path="/Checklist" component={checklist}/>
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}
         <Redirect to="/notFound" />{" "}
         {/* Redireciona para Not Found caso não encontre nenhuma rota */}
