@@ -13,12 +13,6 @@ import "../../assets/Veiculo.css";
 import { Link } from "react-router-dom";
 
 export default function Veiculo() {
-
-  
-
-
-
-
   return (
     <div className="backgroundapp">
       <Navbar></Navbar>
@@ -66,7 +60,7 @@ export default function Veiculo() {
 
               <div className="infoVeiculo1">
                 <div className="especInfoVeiculo">
-                  <FaRoad className="goFile"/>
+                  <FaRoad className="goFile" />
                   <p className="infoPergunta">Quilometragem:</p>
 
                   <p className="infoResposta">27.000km</p>
@@ -90,11 +84,18 @@ export default function Veiculo() {
               <p className="infoPergunta">Último Registro:</p>
               <p className="infoResposta">"O escapamento foi consertado"</p>
             </div>
-            <Link className="btnManu">
-              <span className="editP">
-                Editar registros / Agendar manutenção
-              </span>
-            </Link>
+            <div className="boxRegistroCheck">
+              <Link className="btnManu">
+                <span className="editP">
+                  Editar registros
+                </span>
+              </Link>
+              <Link className="btnManu">
+                <span className="editP">
+                  Checklist
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </main>

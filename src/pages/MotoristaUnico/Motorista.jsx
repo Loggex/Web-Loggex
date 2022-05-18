@@ -12,6 +12,7 @@ import { IoMdCar } from "react-icons/io";
 import { GiBackwardTime } from "react-icons/gi";
 import { GiSmartphone } from "react-icons/gi";
 import { AiOutlineMail } from "react-icons/ai";
+import { RiProfileLine } from "react-icons/ri";
 import api from "../../Services/api"
 
 import '../../assets/Motorista.css'
@@ -71,7 +72,7 @@ export default function Motorista() {
                                         <p className="infoResposta">Jojo@email.com</p>
                                     </div>
                                     <div className="especInfoVeiculo">
-                                        <AiOutlineMail className="goFileMot" />
+                                        <RiProfileLine className="goFileMot" />
 
                                         <p className="infoPergunta">CPF:</p>
 

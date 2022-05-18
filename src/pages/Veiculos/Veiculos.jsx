@@ -4,12 +4,21 @@ import Navbar from '../../Components/Navbar';
 import check from '../../assets/checkmark.svg'
 import chevron from '../../assets/chevronDir.svg'
 import { useHistory } from 'react-router'; 
+import {BsPlusSquareFill} from 'react-icons/bs'
+
 
 import '../../assets/App.css'
 
 export default function Veiculos(){
 
     const [ listaVeiculos, setListaVeiculos ] = useState( [] );
+
+    const hitory = useHistory();
+
+    const onNavigate = (e) => {
+        history.push("/CadastroVeiculos")
+    }
+
 
 
 
@@ -79,6 +88,10 @@ export default function Veiculos(){
                     }
                     
                     
+                </div>
+
+                <div className="caixaPlus">
+                    <BsPlusSquareFill onClick={onNavigate} className="goDirect"/>
                 </div>
             </main>
         </div>

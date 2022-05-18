@@ -225,4 +225,10 @@ main{
     font-size: 15px;
 }
 
+.boxRegistroCheck{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 

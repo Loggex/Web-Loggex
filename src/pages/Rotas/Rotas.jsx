@@ -4,10 +4,18 @@ import Navbar from '../../Components/Navbar';
 import Route from '../../assets/route.svg'
 import check from '../../assets/checkmark.svg'
 import chevron from '../../assets/chevronDir.svg'
+import {BsPlusSquareFill} from 'react-icons/bs'
+import { useHistory } from 'react-router-dom';
 
 export default function Rotas(){
     
     const [ listaRotas, setListaRotas ] = useState( [] );
+
+    const history = useHistory()
+
+    const onNavigate = (e) => {
+        history.push("/CadastroRotas");
+      };
 
 
 
@@ -65,6 +73,9 @@ export default function Rotas(){
                             }
                     
                     
+                </div>
+                <div className="caixaPlus">
+                    <BsPlusSquareFill onClick={onNavigate} className="goDirect"/>
                 </div>
             </main>
         </div>
