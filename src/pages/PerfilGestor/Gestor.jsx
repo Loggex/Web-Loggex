@@ -18,19 +18,19 @@ import "../../assets/Gestor.css";
 import { Link } from "react-router-dom";
 
 export default function Gestor() {
-    function listar() {
-        api('/Alunos/sala/1')
-          .then(resposta => {
-            if (resposta.status === 200) {
-              console.log('Lista')
-              console.log(resposta)
-              setListaAlunos(resposta.data)
-            }
-          })
-          .catch(erro => console.log(erro))
-      }
+    // function listar() {
+      //   api('/Alunos/sala/1')
+      //     .then(resposta => {
+      //       if (resposta.status === 200) {
+      //         console.log('Lista')
+      //         console.log(resposta)
+      //         setListaAlunos(resposta.data)
+      //       }
+      //     })
+      //     .catch(erro => console.log(erro))
+      // }
     
-      useEffect(listarAlunos, []);
+      // useEffect(listarAlunos, []);
   
 
   return (
