@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from '../../Components/Navbar';
 import Route from '../../assets/route.svg'
 import check from '../../assets/checkmark.svg'
+import negativo from '../../assets/x.svg'
 import chevron from '../../assets/chevronDir.svg'
 
 export default function Rotas(){
@@ -52,10 +53,28 @@ export default function Rotas(){
                                 
                             </div>
                         </div>
-                        <div className='estadoVeiculo'>
-                            <span>Realizada</span>
+                        
+                        {   
+                            rotas.idSituacao === 1 ?
+                                <div className='estadoVeiculoFalse'>
+                                <span>Agendada</span>
+                                <img src={negativo} alt="marca de ok" />
+                                </div>
+                            :  rotas.idSituacao === 2 ?
+
+                            <div className='estadoRota'>
+                            <span>Em progresso</span>
                             <img src={check} alt="marca de ok" />
-                        </div>
+                            </div>
+
+                            :    
+                                <div className='estadoVeiculoTrue'>
+                                <span>Finalizada</span>
+                                <img src={check} alt="marca de ok" />
+                                </div>
+
+                        }
+
                         <div className='next'>
                             <img src={chevron} alt="" />
                         </div>

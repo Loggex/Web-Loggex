@@ -12,13 +12,7 @@ main {
   justify-content: center;
 }
 
-.backgroundapp {
-  background-color: #f3f0f0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
+
 
 .containerInfoPeca {
   width: 100%;

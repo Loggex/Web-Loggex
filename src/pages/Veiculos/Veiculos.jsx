@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Navbar from '../../Components/Navbar';
 import check from '../../assets/checkmark.svg'
+import negativo from '../../assets/x.svg'
 import chevron from '../../assets/chevronDir.svg'
 import { useHistory } from 'react-router'; 
 
@@ -66,10 +67,25 @@ export default function Veiculos(){
                             </p>
                             <span className='textoVeiculo'>{veiculo.descricao}</span>
                         </div>
-                        <div className='estadoVeiculo'>
-                            <span>Operante</span>
-                            <img src={check} alt="marca de ok" />
-                        </div>
+
+                        {   
+                            veiculo.estadoVeiculo === true &&
+                                <div className='estadoVeiculoTrue'>
+                                <span>Operante</span>
+                                <img src={check} alt="marca de ok" />
+                                </div>
+                        }
+                        
+                        {   
+                            veiculo.estadoVeiculo === false &&
+                                <div className='estadoVeiculoFalse'>
+                                <span>Não operante</span>
+                                <img src={negativo} alt="marca de ok" />
+                                </div>
+                        }
+
+                        
+                        
                         <div className='next'>
                             <img src={chevron} alt="" />
                         </div>
