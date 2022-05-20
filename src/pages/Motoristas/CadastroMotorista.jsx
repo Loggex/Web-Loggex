@@ -24,7 +24,8 @@ export default function CadastroMotorista(){
 
 
             axios.post('http://localhost:5000/api/motorista', {
-                cnh: cnhInput,
+                
+            cnh: cnhInput
             }, {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
@@ -32,7 +33,7 @@ export default function CadastroMotorista(){
             })
                 .then(resposta => {
                     if (resposta.status === 201) {
-                        console.log('Veiculo cadastrado!');
+                        console.log('Motorista cadastrado!');
     
                         setNome('')
                         setCpf('')
@@ -66,7 +67,7 @@ export default function CadastroMotorista(){
                     </div>
                     <div className="fundoCadastro">
                         <h1>Cadastrar um motorista</h1>
-                            <form action="" className="formCadastro">
+                            <form onSubmit={cadastrarMotorista} action="" className="formCadastro">
                                 <div className="formularios">
                                     <div className="formColuna">
                                         <div className="inputDiv">
