@@ -1,0 +1,251 @@
+[33mcommit e0b4d1da15348c99ac454f753857a9436d854c49[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/checklist[m[33m, [m[1;32morigin/navegacao[m[33m, [m[1;32mchecklist[m[33m)[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Fri May 20 09:51:20 2022 -0300
+
+    checklist semiconcluída
+
+[33mcommit 3505ea1272631b0ef98e9929d08773245e0c182d[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Wed May 18 11:12:46 2022 -0300
+
+    Bugs estranhos
+
+[33mcommit 358dc3c4fd0b05bb2b5cd7f18f23302225f3845d[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Wed May 18 09:56:52 2022 -0300
+
+    Atencao atencao]
+
+[33mcommit 7bea2b476eda859ea96f8490d136f241e07bd85e[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Wed May 18 08:55:07 2022 -0300
+
+    web corrigido
+
+[33mcommit b69f8f200795ef64d808ebc816742911d1688c1d[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Tue May 17 07:54:58 2022 -0300
+
+    falta navegacao
+
+[33mcommit 96f83fc12dcd25e332ec7b0d68bebe3e843ebf40[m
+Merge: 1d5007a 91b11ba
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Tue May 10 11:01:35 2022 -0300
+
+    merge de todas as branches
+
+[33mcommit 91b11ba84a4722c5af71230907b121ad9e69701f[m[33m ([m[1;31morigin/ANDRE[m[33m)[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Tue May 10 10:55:44 2022 -0300
+
+    Cadastros
+
+[33mcommit 1d5007aad51910c9534c9c232f8d57ca47cab79f[m
+Merge: 12331df 4b66d05
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Tue May 10 09:50:19 2022 -0300
+
+    merge branch notFound
+
+[33mcommit 807aa030f0822ffbf574efb88b312fdf7925ccac[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Tue May 10 09:06:04 2022 -0300
+
+    Aqui jaz o login bom
+
+[33mcommit 4b66d054487f350f68c73a7b492eb3f5d39e64fd[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Tue May 10 08:45:07 2022 -0300
+
+    aqui jaz o login mal feito
+
+[33mcommit 5e15b160ec551e1859bb6ceacd8871c047f89287[m
+Author: André <andre.aslima@hotmail.com>
+Date:   Mon May 9 21:52:15 2022 -0300
+
+    Metodos de cadastro feitos
+
+[33mcommit 481445625bd9052d8d26f585a1df6a1e498469f5[m
+Author: André <andre.aslima@hotmail.com>
+Date:   Mon May 9 10:57:40 2022 -0300
+
+    Input tipo veiculo adicionado
+
+[33mcommit 12331df03852288c5f16de574abdc4ad8e0baded[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Mon May 9 09:31:22 2022 -0300
+
+    tela inicial corrigida
+
+[33mcommit 9bfef3bfc94289daa21dcbfadb585dd3d754d3c8[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Fri May 6 11:09:07 2022 -0300
+
+    tela de motorista arrumada
+
+[33mcommit c2cf20661e7ac5dc9a65fb05b8b2b957f513acaa[m[33m ([m[1;32mmiguel[m[33m)[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Fri May 6 10:31:51 2022 -0300
+
+    develop com merge
+
+[33mcommit d8a12252ec4497134658b4a011d78d8ff7cb854a[m
+Merge: 835a295 5ec1372
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Fri May 6 10:01:32 2022 -0300
+
+    merge
+
+[33mcommit 5ec1372019d8f5c83b9c7b36567023513da367da[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Fri May 6 09:42:28 2022 -0300
+
+    olho de visualizar senha finalizada
+
+[33mcommit 835a295d99078ab126e417dad4bcd876cc6bff40[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Fri May 6 09:31:19 2022 -0300
+
+    motoristas, rotas e veiculos listando
+
+[33mcommit d018d5c7469bd3dcca8fc07f6ea5ea93c7839b81[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Thu May 5 11:10:52 2022 -0300
+
+    Tela notFound arrumada e tela do bloodborne de peças feita
+
+[33mcommit b03b49ea80de31fecbd46aba472ab598bcdfe004[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Thu May 5 11:07:07 2022 -0300
+
+    Tela de cadastro de manutencao feita
+
+[33mcommit 34c2029106930c55123fb7a77dce6ef433852ffc[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Wed May 4 11:07:57 2022 -0300
+
+    tela de cadastro de pecas iniciada
+
+[33mcommit 24b88709303ade124b00ee4ee392d6fadda72dc6[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Wed May 4 10:04:15 2022 -0300
+
+    Tela de Cadastro de rotas e Cadastro motorista terminadas
+
+[33mcommit 7c7854749f93d172e8571dbe72a1387210907cf4[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Tue May 3 11:13:39 2022 -0300
+
+    Tela de Cadastro de veiculo terminada e cadastro de motorista quase pronta
+
+[33mcommit 55a932df1bbfe12a30b390b0cc60f11663dc5170[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Tue May 3 11:08:54 2022 -0300
+
+    tela de listagem do dark souls 3, motoristas
+
+[33mcommit 4fc91ba3047f116ab2818ba8282e31efa2b55f69[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Tue May 3 08:28:15 2022 -0300
+
+    testado
+
+[33mcommit 542faa9a5a54dec45468be1abe3f301d9b46c13f[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Tue May 3 08:27:47 2022 -0300
+
+    teste
+
+[33mcommit fecf35501224b6412305b2e64ca665f8811bc5e7[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Mon May 2 11:12:54 2022 -0300
+
+    tela de rota unica terminada
+
+[33mcommit 734dda5adf99fc24824b95c93b504ce37481d60c[m
+Author: André <andre.aslima@hotmail.com>
+Date:   Mon May 2 08:39:32 2022 -0300
+
+    commit atrasado
+
+[33mcommit 6249c475fe9c56dcdb4d07f13fcf1bf0108fac2b[m
+Author: André Augusto Dos Santos Lima <47926331848@info.scs>
+Date:   Thu Apr 28 11:04:47 2022 -0300
+
+    Tela de cadastro de veiculos iniciada
+
+[33mcommit aa35ab155a52a7b6303259783e9e482a997e79fa[m
+Merge: cf1ecf8 570463c
+Author: Miguel Candido <82421882+MiguelCandido@users.noreply.github.com>
+Date:   Thu Apr 28 10:36:39 2022 -0300
+
+    Merge pull request #1 from Loggex/miguel
+    
+    Miguel
+
+[33mcommit 570463cb91b30b8db4c7618dfd3558d2143471fd[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Thu Apr 28 10:15:20 2022 -0300
+
+    tela inicial estática
+
+[33mcommit 8b4a6b2fdb8ae1e7721f3c06840df973956513dc[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Wed Apr 27 11:15:58 2022 -0300
+
+    telas de motorista unico e veiculo unico terminadas
+
+[33mcommit 7a2602c72320339ced0d213defcbc7e42e720ff0[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Wed Apr 20 10:50:23 2022 -0300
+
+    telas de listagem estáticas
+
+[33mcommit 122cadcacccc52b2f72ed44a8ea63c60e70e67b1[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Tue Apr 19 11:10:13 2022 -0300
+
+    realizando a tela d e[
+
+[33mcommit 9c3b7e041933fe71ae4c104be113cec194b4c75a[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Tue Apr 19 11:05:10 2022 -0300
+
+    tela de motoristas estática
+
+[33mcommit ae70c90bb6b0d0286a93b0e5ca15ddb4e3b30eca[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Tue Apr 19 08:27:13 2022 -0300
+
+    Elden
+
+[33mcommit 6bc3c6284de1310cfe5547327dbab04376301a01[m
+Author: Matheus Pereira Dos Santos <50374464812@info.scs>
+Date:   Mon Apr 18 11:06:02 2022 -0300
+
+    tela de notFound finalizada e tela de informações sobre um veiculo sendo executada
+
+[33mcommit cf1ecf81b79bf78947f1e6f7076c881542e1dfd8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Mon Apr 18 08:30:01 2022 -0300
+
+    listagem de veículos estática terminada
+
+[33mcommit 5a45d216d057178f432aedd746560274eb62ce3f[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Mon Apr 18 08:06:58 2022 -0300
+
+    Lista de veículos em desenvolvimento
+
+[33mcommit b4d027615567222a440db8076533cc0e32c38059[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Wed Apr 13 10:37:25 2022 -0300
+
+    Tela estática de Login feita
+
+[33mcommit 34fb12a843faabec6167326a4316e5d6c8d51ed9[m
+Author: MiguelCandido <miguelcandidoperigo@gmail.com>
+Date:   Wed Apr 13 08:08:25 2022 -0300
+
+    Initialize project using Create React App
