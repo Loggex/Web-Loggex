@@ -20,58 +20,14 @@ export default function App() {
     e.preventDefault();
     setShow(!show);
   };
-  /* 
-  const onsubmit = (e) => {
-    history.push("/Motoristas");
-  }; */
-
-  function EfetuarLogin(e) {
-    e.preventDefault();
-    setErroMensagem("");
-    setIsLoading(true);
-
-    api
-      .post("http://192.168.3.169:5000/api/Login/Gerente", {
-        email: email,
-        senha: senha,
-      })
-
-      .then((response) => {
-        if (response.status === 200) {
-          localStorage.setItem("usuario-login", response.data.token);
-
-          setSenha("");
-
-          setEmail("");
-
-          setIsLoading(false);
-
-          if (parseJwt().role === "1") {
-            history.push("http://192.168.3.169:5000/api/Motoristas");
-          }
-          if (parseJwt().role === "2") {
-            history.push("http://192.168.3.169:5000/api/Motoristas");
-          }
-        }
-      })
-      .catch((erro) => {
-        console.log(erro);
-
-        // setSenha('')
-
-        setErroMensagem("E-mail e/ou Senha inválidos");
-
-        setIsLoading(false);
-      });
-  }
-
+  
   return (
     <div className="App">
       <div className="background">
         <div className="cardLogin">
           <img src={logo} alt="Logo do loggex" className="logoLogin" />
           <h1>Acesse sua conta</h1>
-          <form onSubmit={EfetuarLogin} className="formLogin">
+          <form className="formLogin">
             <div className="campoLoginE">
               <img src={emailImage} alt="Ilustração de email"></img>
               <input

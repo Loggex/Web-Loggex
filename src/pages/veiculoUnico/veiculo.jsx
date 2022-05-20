@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Navbar from "../../Components/Navbar";
 import { GoNote } from "react-icons/go";
 import { MdOutlineCheckCircle } from "react-icons/md";
@@ -13,6 +14,12 @@ import "../../assets/Veiculo.css";
 import { Link } from "react-router-dom";
 
 export default function Veiculo() {
+  const [show, setShow] = useState([]);
+
+  /* function toggleButton(){
+    let
+  } */
+
   return (
     <div className="backgroundapp">
       <Navbar></Navbar>
@@ -33,28 +40,42 @@ export default function Veiculo() {
             <div className="especInfoVeiculo">
               <MdOutlineCheckCircle className="goOp2" />
               <p className="infoPergunta">Operacional:</p>
-              <p className="infoResposta">Sim</p>
+              <select className="infoPerguntaInput2">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+              </select>
             </div>
 
             <div className="containerveiculo2">
               <div className="infoVeiculo1">
                 <div className="especInfoVeiculo">
                   <GoNote className="goFilePlaca" />
-                  <p className="infoPergunta">Placa:</p>
+                  <p className="infoPerguntaPlaca">Placa:</p>
 
-                  <p className="infoResposta">BRAE2019</p>
+                  <input
+                    className="infoPerguntaInput"
+                    type="text"
+                    placeholder="Digite aqui"
+                  />
                 </div>
                 <div className="especInfoAno">
                   <IoCalendarOutline className="goCalendar" />
                   <p className="infoPerguntaExato">Ano de fabricação:</p>
 
-                  <p className="infoResposta">04/05/2015</p>
+                  <input
+                    className="infoPerguntaInput"
+                    type="text"
+                    placeholder="Digite aqui"
+                  />
                 </div>
                 <div className="especInfoVeiculo">
                   <BiMessageCheck className="goFileSeg" />
-                  <p className="infoPerguntaExato">Tem seguro:</p>
+                  <p className="infoPerguntaSeg">Tem seguro:</p>
 
-                  <p className="infoResposta">Sim</p>
+                  <select className="infoPerguntaInput">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                  </select>
                 </div>
               </div>
 
@@ -62,20 +83,33 @@ export default function Veiculo() {
                 <div className="especInfoVeiculo">
                   <FaRoad className="goFile" />
                   <p className="infoPergunta">Quilometragem:</p>
+                  <input
+                    className="infoPerguntaInput"
+                    type="text"
+                    placeholder="Digite aqui"
+                  />
 
-                  <p className="infoResposta">27.000km</p>
+                  {/* <p className="infoResposta">27.000km</p> */}
                 </div>
                 <div className="especInfoVeiculo">
                   <BiColorFill className="goColorVei" />
                   <p className="infoPergunta">Cor:</p>
 
-                  <p className="infoResposta">Vermelho</p>
+                  <input
+                    className="infoPerguntaInput"
+                    type="text"
+                    placeholder="Digite aqui"
+                  />
                 </div>
                 <div className="especInfoChassi">
                   <IoMdCar className="goFileChassi" />
                   <p className="infoPerguntaChassi">Chassi:</p>
 
-                  <p className="infoRespostaChassi">3AA eAG510 2c 6B1818</p>
+                  <input
+                    className="infoPerguntaInput"
+                    type="text"
+                    placeholder="Digite aqui"
+                  />
                 </div>
               </div>
             </div>
@@ -86,14 +120,12 @@ export default function Veiculo() {
             </div>
             <div className="boxRegistroCheck">
               <Link className="btnManu">
-                <span className="editP">
+                <span className="editP" value={setShow}>
                   Editar registros
                 </span>
               </Link>
               <Link className="btnManu">
-                <span className="editP">
-                  Checklist
-                </span>
+                <span className="editP">Checklist</span>
               </Link>
             </div>
           </div>
