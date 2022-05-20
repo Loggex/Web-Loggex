@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+*{
+    padding: 0;
+    text-decoration: none;
+  }
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backgroundapp{
+    background-color: #F3F0F0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.NomeVeiculo{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.boxVeiculo{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.boxVeiculo img{
+    border-radius: 100px;
+}
+
+.containerInfoVeiculo{
+    width: 100%;
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.containerVeiculo{
+    width: 54vw;
+    height: 66vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+    
+}
+
+.boxcontainerveiculo{
+    width: 100%;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.infoPergunta{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 5px;
+}
+.infoPerguntaPlaca{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.infoPerguntaInput{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 5px;
+    
+    width: 59%;
+    margin-right: 10px;
+}
+.infoPerguntaInput2{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 5px;
+    
+    width: 35%;
+    margin-right: 10px;
+}
+.infoPerguntaChassi{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.infoPerguntaExato{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 15px;
+    width: 100%;
+}
+.infoPerguntaSeg{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 0px;
+    width: 45%;
+}
+
+.infoResposta{
+    font-size: 17px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 8px;
+}
+.infoRespostaChassi{
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 8px;
+}
+
+
+.especInfoVeiculo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    width: 92%;
+
+
+}
+.especInfoAno{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    width: 94%;
+
+
+}
+.especInfoChassi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 83%;
+    padding-bottom: 10px
+
+
+}
+
+.infoVeiculo1{
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.containerprinc{
+    width:100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.containerprincLast{
+    width:100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.containerveiculo2{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.goFile{
+    height: 20px;
+    width: 15%;
+    padding-left: 15px;
+
+}
+.goFileChassi{
+    height: 30px;
+    width: 15%;
+
+}
+.goFilePlaca{
+    height: 30px;
+    width: 15%;
+    padding-left: 24px;
+
+}
+
+.goFileSeg{
+    height: 30px;
+    width: 25%;
+    padding-left: 15px;
+
+}
+
+.goCalendar{
+    height: 30px;
+    width: 15%;
+    padding-left: 33px;
+
+}
+
+.goColorVei{
+    height: 30px;
+    width: 15%;
+    padding-left: 15px;
+}
+
+.goOp{
+    height: 30px;
+    width: 6%;
+}
+.goOp2{
+    height: 30px;
+    width: 4%;
+}
+
+.btnManu{
+    background: #060657;
+    width: 36%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.editP{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+
+.boxRegistroCheck{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 1441px){
+    .especInfoAno{
+        width: 100%;
+    }
+    
+    .infoPerguntaExato{
+        padding-left: 10px;
+    }
+
+    
+}
+@media only screen and (max-width: 1410px){
+    .especInfoAno{
+        width: 100%;
+    }
+
+    .infoPerguntaExato{
+        padding-left: 10px;
+    }
+  .goCalendar{
+        width: 0px;
+        padding-left: 10px;
+    }
+
+    .goColorVei{
+        width: 0px;
+        padding-left: 10px;
+    }
+
+    .goFile{
+        width: 0px;
+        padding-left: 10px;
+    }
+    .goFileChassi{
+        width: 0px;
+        padding-left: 10px;
+    }
+    .goFilePlaca{
+        width: 0px;
+        padding-left: 10px;
+    }
+    .goFileSeg{
+        width: 0px;
+        padding-left: 10px;
+    }
+    .goOp{
+        width: 0px;
+        padding-left: 10px;
+    }
+    .goOp2{
+        width: 0px;
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 1025px){
+    
+
+    .containerVeiculo{
+        width: 68vw;
+    }
+    .infoVeiculo1{
+        width: 34vw;
+    }
+
+    .especInfoAno{
+        width: 97%;
+    }
+
+    .especInfoChassi{
+        width: 88%;
+    }
+
+    .infoPergunta{
+        font-size: 20px;
+    }
+
+
+}

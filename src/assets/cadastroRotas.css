@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
+
+*{
+    padding: 0;
+    text-decoration: none;
+}
+
+.backgroundapp{
+    background-color: #F3F0F0;
+
+}
+
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top:; */
+}
+
+.fundoCadastro{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 65vh;
+    box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+.formCadastro{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+}
+
+.formularios{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    
+}
+
+.formColuna{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-between;
+    height: 100%;
+}
+
+h3{
+    font-size: 16px;
+    margin: 0;
+}
+
+.inputDiv{
+    padding-bottom: 7%;
+}
+
+.formColunaMtc{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formColunaMtc select{
+    width: 101%;
+}
+
+.inputDiv input{
+    width: 100%;
+    height: 60%;
+    border-radius: 15px;
+    padding-left: 10px;
+    border-width: 1px;
+    /* margin-top: ; */
+    /* border: 50px; */
+}
+
+.inputDiv select{
+    width: 103%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+#botaoCadastrar{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 50%;
+    height: 10%;
+    background-color: #060657;
+    font-family: "Poppins";
+    color: white;
+    font-weight: 550;
+    font-size: 16px;
+    border-radius: 2px;
+}

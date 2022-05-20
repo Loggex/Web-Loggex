@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+*{
+    padding: 0;
+    text-decoration: none;
+  }
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backgroundapp{
+    background-color: #F3F0F0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.NomeGestor{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.boxGestor{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.imgGestor{
+    border-radius: 100px;
+    width: 10%;
+}
+
+.containerInfoGestor{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30 px;
+}
+
+.containerGestor{
+    width: 50%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+    
+}
+
+.boxcontainerGestor{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.infoPergunta{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 15px;
+}
+.infoPerguntaTel{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 10px;
+}
+.infoTituloGest{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 15px;
+    margin: 0;
+}
+.infoPerguntaExatoGestor{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.infoRespostaGestor{
+    font-size: 24px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 8px;
+}
+
+
+.especInfoGestor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.especInfoGestor1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+    width: 100%;
+
+}
+
+
+.infoGestor1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.containerprinc{
+    width:100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.containerGestor2{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.goFileGest{
+    height: 30px;
+    width: 15%;
+    padding-left: 30px;
+
+}
+.goFileGestph{
+    height: 35px;
+    width: 5vh;
+    padding-left: 24px;
+}
+
+
+
+
+.btnManuGest{
+    background: #060657;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.editP{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.infoVei{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
