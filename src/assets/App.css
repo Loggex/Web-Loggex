@@ -238,6 +238,10 @@ main {
   width: 100%;
 }
 
+.maincomnav{
+  margin-left: 20vw;
+}
+
 h1 {
   font-family: "Sen", sans-serif;
   font-weight: 700;

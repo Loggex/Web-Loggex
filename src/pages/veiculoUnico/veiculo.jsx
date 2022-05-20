@@ -14,17 +14,38 @@ import "../../assets/Veiculo.css";
 import { Link } from "react-router-dom";
 
 export default function Veiculo() {
-  const [nomeVeiculo, setNomeVeiculo] = useState("");
+  const [veiculo, setVeiculo] = useState();
 
   
+  async function buscarVeiculo() {
 
+    await axios('http://localhost:5000/api/veiculos/placa/' + (window.location.pathname.split("/")[2]), {
+        headers : {
+            'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+        }
+    })
+    .then(resposta => {
+        if (resposta.status === 200) {
+          setVeiculo(resposta.data)
+        }
+    } )
+
+    .catch(erro => 
+        console.log(erro)
+
+        );
+};
+
+useEffect( () =>{
+  buscarVeiculo();
+});
 
 
 
   return (
     <div className="backgroundapp">
       <Navbar></Navbar>
-      <main>
+      <main className='maincomnav'>
         <div className="boxVeiculo">
           <img
             src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
@@ -33,7 +54,7 @@ export default function Veiculo() {
           />
         </div>
         <div className="boxcontainerveiculo">
-          <h1 className="NomeVeiculo">Volvo Sh 540 6x4</h1>
+          <h1 className="NomeVeiculo">{veiculo?.placa}</h1>
         </div>
 
         <div className="containerInfoVeiculo">
@@ -41,7 +62,10 @@ export default function Veiculo() {
             <div className="especInfoVeiculo">
               <MdOutlineCheckCircle className="goOp2" />
               <p className="infoPergunta">Operacional:</p>
-              <p className="infoResposta">Sim</p>
+              { veiculo?.estadoVeiculo === true ?
+                    <p className="infoResposta">Sim</p> :
+                    <p className="infoResposta">Não</p>
+                  }
             </div>
 
             <div className="containerveiculo2">
@@ -50,19 +74,22 @@ export default function Veiculo() {
                   <GoNote className="goFilePlaca" />
                   <p className="infoPergunta">Placa:</p>
 
-                  <p className="infoResposta">BRAE2019</p>
+                  <p className="infoResposta">{veiculo?.placa}</p>
                 </div>
                 <div className="especInfoAno">
                   <IoCalendarOutline className="goCalendar" />
                   <p className="infoPerguntaExato">Ano de fabricação:</p>
 
-                  <p className="infoResposta">04/05/2015</p>
+                  <p className="infoResposta">{veiculo?.anoFabricacao}</p>
                 </div>
                 <div className="especInfoVeiculo">
                   <BiMessageCheck className="goFileSeg" />
                   <p className="infoPerguntaExato">Tem seguro:</p>
 
-                  <p className="infoResposta">Sim</p>
+                  { veiculo?.seguro === true ?
+                    <p className="infoResposta">Sim</p> :
+                    <p className="infoResposta">Não</p>
+                  }
                 </div>
               </div>
 
@@ -71,26 +98,26 @@ export default function Veiculo() {
                   <FaRoad className="goFile"/>
                   <p className="infoPergunta">Quilometragem:</p>
 
-                  <p className="infoResposta">27.000km</p>
+                  <p className="infoResposta">{veiculo?.quilometragem + "km"}</p>
                 </div>
                 <div className="especInfoVeiculo">
                   <BiColorFill className="goColorVei" />
                   <p className="infoPergunta">Cor:</p>
 
-                  <p className="infoResposta">Vermelho</p>
+                  <p className="infoResposta">{veiculo?.cor}</p>
                 </div>
                 <div className="especInfoChassi">
                   <IoMdCar className="goFileChassi" />
                   <p className="infoPerguntaChassi">Chassi:</p>
 
-                  <p className="infoRespostaChassi">3AA eAG510 2c 6B1818</p>
+                  <p className="infoRespostaChassi">{veiculo?.chassi}</p>
                 </div>
               </div>
             </div>
             <div className="containerprincLast">
               <GiBackwardTime className="goOp" />
               <p className="infoPergunta">Último Registro:</p>
-              <p className="infoResposta">"O escapamento foi consertado"</p>
+              <p className="infoResposta">{veiculo?.descricao}</p>
             </div>
             <Link className="btnManu">
               <span className="editP">

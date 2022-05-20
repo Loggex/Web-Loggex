@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar';
 import check from '../../assets/checkmark.svg'
 import negativo from '../../assets/x.svg'
 import chevron from '../../assets/chevronDir.svg'
+import {Link} from 'react-router-dom'
 import { useHistory } from 'react-router'; 
 
 import '../../assets/App.css'
@@ -86,9 +87,9 @@ export default function Veiculos(){
 
                         
                         
-                        <div className='next'>
+                        <Link to={"/veiculo/" + veiculo.placa}className='next'>
                             <img src={chevron} alt="" />
-                        </div>
+                        </Link>
                     </div>
                             )
                         } )
