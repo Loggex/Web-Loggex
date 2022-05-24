@@ -603,3 +603,100 @@ text-decoration: none;
   margin-bottom: 10px;
   font-weight: 400;
 }
+
+.caixaPlus{
+  display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 426px) /* for mobile L */
+{
+  .cardLogin{
+    width: 100%;
+    height: 100%;
+  }
+
+  .cardLogin h1{
+    font-size: 7vw;
+
+  }
+
+  .logoLogin {
+    width: 40vw;
+  }
+
+}
+
+@media only screen and (max-width: 376px) /* for mobile M */
+{
+  .cardLogin{
+    width: 100%;
+    height: 100%;
+
+  }
+  
+
+  .formLogin{
+    width: 80%;
+  }
+
+  .campoLoginE{
+    width: 100%;
+  }
+
+  .campoLoginP{
+    width: 100%;
+  }
+
+  .botao{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 321px) /* for mobile S */
+{
+  .cardLogin{
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .formLogin{
+    width: 80%;
+  }
+
+  .campoLoginE{
+    width: 100%;
+  }
+
+  .campoLoginP{
+    width: 100%;
+  }
+
+  .botao{
+    width: 100%;
+  }
+
+  .campoLoginE img{
+    width: 0px;
+  }
+
+  .campoLoginP img{
+    width: 0px;
+
+  }
+
+  .campoLoginP{
+    width: 108%;
+  }
+  .campoLoginE{
+    width: 108%;
+  }
+
+  .cardLogin h1{
+    font-size: 8vw;
+
+  }
+}

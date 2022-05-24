@@ -5,12 +5,15 @@ import Route from '../../assets/route.svg'
 import check from '../../assets/checkmark.svg'
 import negativo from '../../assets/x.svg'
 import chevron from '../../assets/chevronDir.svg'
+import {BsPlusSquareFill} from 'react-icons/bs'
 
 export default function Rotas(){
     
     const [ listaRotas, setListaRotas ] = useState( [] );
 
-
+    const onNavigate = (e) => {
+        history.push("/cadastroRotas")
+    }
 
     async function buscarRotas() {
 
@@ -84,6 +87,9 @@ export default function Rotas(){
                             }
                     
                     
+                </div>
+                <div className="caixaPlus">
+                    <BsPlusSquareFill onClick={onNavigate} className="goDirect"/>
                 </div>
             </main>
         </div>
