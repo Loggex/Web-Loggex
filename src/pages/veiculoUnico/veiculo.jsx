@@ -16,29 +16,29 @@ import { Link } from "react-router-dom";
 export default function Veiculo() {
   const [veiculo, setVeiculo] = useState();
 
-  
+
   async function buscarVeiculo() {
 
     await axios('http://localhost:5000/api/veiculos/placa/' + (window.location.pathname.split("/")[2]), {
-        headers : {
-            'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
-        }
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+      }
     })
-    .then(resposta => {
+      .then(resposta => {
         if (resposta.status === 200) {
           setVeiculo(resposta.data)
         }
-    } )
+      })
 
-    .catch(erro => 
+      .catch(erro =>
         console.log(erro)
 
-        );
-};
+      );
+  };
 
-useEffect( () =>{
-  buscarVeiculo();
-});
+  useEffect(() => {
+    buscarVeiculo();
+  });
 
 
 
@@ -62,10 +62,10 @@ useEffect( () =>{
             <div className="especInfoVeiculo">
               <MdOutlineCheckCircle className="goOp2" />
               <p className="infoPergunta">Operacional:</p>
-              { veiculo?.estadoVeiculo === true ?
-                    <p className="infoResposta">Sim</p> :
-                    <p className="infoResposta">Não</p>
-                  }
+              {veiculo?.estadoVeiculo === true ?
+                <p className="infoResposta">Sim</p> :
+                <p className="infoResposta">Não</p>
+              }
             </div>
 
             <div className="containerveiculo2">
@@ -86,7 +86,7 @@ useEffect( () =>{
                   <BiMessageCheck className="goFileSeg" />
                   <p className="infoPerguntaExato">Tem seguro:</p>
 
-                  { veiculo?.seguro === true ?
+                  {veiculo?.seguro === true ?
                     <p className="infoResposta">Sim</p> :
                     <p className="infoResposta">Não</p>
                   }
@@ -95,7 +95,7 @@ useEffect( () =>{
 
               <div className="infoVeiculo1">
                 <div className="especInfoVeiculo">
-                  <FaRoad className="goFile"/>
+                  <FaRoad className="goFile" />
                   <p className="infoPergunta">Quilometragem:</p>
 
                   <p className="infoResposta">{veiculo?.quilometragem + "km"}</p>
@@ -121,8 +121,12 @@ useEffect( () =>{
             </div>
             <Link className="btnManu">
               <span className="editP">
-                Editar registros / Agendar manutenção
+                Editar registros
               </span>
+            </Link>
+
+            <Link className="btnManu">
+              <span className="editP">Checklist</span>
             </Link>
           </div>
         </div>

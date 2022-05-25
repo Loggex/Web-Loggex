@@ -6,10 +6,13 @@ import check from '../../assets/checkmark.svg'
 import negativo from '../../assets/x.svg'
 import chevron from '../../assets/chevronDir.svg'
 import {BsPlusSquareFill} from 'react-icons/bs'
+import { useHistory } from 'react-router-dom';
 
 export default function Rotas(){
     
     const [ listaRotas, setListaRotas ] = useState( [] );
+
+    const history = useHistory()
 
     const onNavigate = (e) => {
         history.push("/cadastroRotas")

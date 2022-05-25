@@ -6,6 +6,8 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router';
 import { parseJwt, usuarioAutenticado } from '../../Services/auth';
+import { HiEyeOff } from 'react-icons/hi'
+import { HiEye } from 'react-icons/hi'
 
 
 
@@ -13,11 +15,18 @@ import { parseJwt, usuarioAutenticado } from '../../Services/auth';
 export default function App() {
   const [emailInput, setEmail] = useState('');
   const[senhaInput, setSenha] = useState('');
+  
+  const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
   const logado = (e) => {
     history.push("/Veiculos")
   }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShow(!show);
+  };
 
   function login(cred) {
     cred.preventDefault();
@@ -87,17 +96,22 @@ export default function App() {
             </div>
             <div className="campoLoginP">
               <img src={password} alt='Ilustração de senha'></img>
-              <input className="inputLogin" onChange={(campo) => setSenha(campo.target.value)} type="password"placeholder="Senha"></input>
+              <input className="inputLogin" onChange={(campo) => setSenha(campo.target.value)} placeholder="Senha" type={show ? "text" : "password"}></input>
+              <div className="login-eye">
+                {show ? (
+                  <HiEye className="eye" onClick={handleClick} />
+                ) : (
+                  <HiEyeOff className="eye" onClick={handleClick} />
+                )}
+              </div>
             </div>
+            <button className='botao'>Entrar</button>
             <div className="esqueceste">
               <a href="">Esqueceu sua senha?</a>
             </div>
-            <button className='botao'>Entrar</button>
           </form>
         </div>
       </div>
     </div>
   );
 }
-// console.log(email);
-// export default App;
