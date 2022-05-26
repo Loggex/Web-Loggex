@@ -91,15 +91,6 @@ main{
 }
 
 
-.especInfoVeiculo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 65px;
-
-
-}
 
 
 .infoMotorista1{
@@ -163,14 +154,6 @@ main{
     width: 6%;
 }
 
-.btnManu{
-    background: #060657;
-    width: 50%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 

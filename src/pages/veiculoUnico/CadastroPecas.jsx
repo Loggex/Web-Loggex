@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "../../Components/Navbar";
-import { GoNote } from "react-icons/go";
-import { MdOutlineCheckCircle } from "react-icons/md";
-import { IoCalendarOutline } from "react-icons/io5";
-import { BiMessageCheck } from "react-icons/bi";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdCar } from "react-icons/io";
-import { GiBackwardTime } from "react-icons/gi";
-
-import api from "../../Services/api"
 
 import "../../assets/Pecas.css";
-import { Link } from "react-router-dom";
 
 export default function CadastroPecas() {
   const [nomePeca, setNomePeca] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [idTipoPeca, setIdTipoPeca] = useState(0)
 
 
   // função responsável por fazer a requisição que cadastra um novo tipo de usuário

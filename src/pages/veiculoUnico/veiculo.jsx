@@ -15,37 +15,40 @@ import { Link } from "react-router-dom";
 
 export default function Veiculo() {
   const [veiculo, setVeiculo] = useState();
+  const [show, setShow] = useState(false);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShow(!show);
+  };
 
   async function buscarVeiculo() {
-
-    await axios('http://localhost:5000/api/veiculos/placa/' + (window.location.pathname.split("/")[2]), {
-      headers: {
-        'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+    await axios(
+      "http://localhost:5000/api/veiculos/placa/" +
+        window.location.pathname.split("/")[2],
+      {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("usuario-login"),
+        },
       }
-    })
-      .then(resposta => {
+    )
+      .then((resposta) => {
         if (resposta.status === 200) {
-          setVeiculo(resposta.data)
+          setVeiculo(resposta.data);
         }
       })
 
-      .catch(erro =>
-        console.log(erro)
-
-      );
-  };
+      .catch((erro) => console.log(erro));
+  }
 
   useEffect(() => {
     buscarVeiculo();
   });
 
-
-
   return (
     <div className="backgroundapp">
       <Navbar></Navbar>
-      <main className='maincomnav'>
+      <main className="maincomnav">
         <div className="boxVeiculo">
           <img
             src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
@@ -62,10 +65,11 @@ export default function Veiculo() {
             <div className="especInfoVeiculo">
               <MdOutlineCheckCircle className="goOp2" />
               <p className="infoPergunta">Operacional:</p>
-              {veiculo?.estadoVeiculo === true ?
-                <p className="infoResposta">Sim</p> :
+              {veiculo?.estadoVeiculo === true ? (
+                <p className="infoResposta">Sim</p>
+              ) : (
                 <p className="infoResposta">Não</p>
-              }
+              )}
             </div>
 
             <div className="containerveiculo2">
@@ -86,10 +90,11 @@ export default function Veiculo() {
                   <BiMessageCheck className="goFileSeg" />
                   <p className="infoPerguntaExato">Tem seguro:</p>
 
-                  {veiculo?.seguro === true ?
-                    <p className="infoResposta">Sim</p> :
+                  {veiculo?.seguro === true ? (
+                    <p className="infoResposta">Sim</p>
+                  ) : (
                     <p className="infoResposta">Não</p>
-                  }
+                  )}
                 </div>
               </div>
 
@@ -98,7 +103,9 @@ export default function Veiculo() {
                   <FaRoad className="goFile" />
                   <p className="infoPergunta">Quilometragem:</p>
 
-                  <p className="infoResposta">{veiculo?.quilometragem + "km"}</p>
+                  <p className="infoResposta">
+                    {veiculo?.quilometragem + "km"}
+                  </p>
                 </div>
                 <div className="especInfoVeiculo">
                   <BiColorFill className="goColorVei" />
@@ -119,15 +126,15 @@ export default function Veiculo() {
               <p className="infoPergunta">Último Registro:</p>
               <p className="infoResposta">{veiculo?.descricao}</p>
             </div>
-            <Link className="btnManu">
-              <span className="editP">
-                Editar registros
-              </span>
-            </Link>
+            <div className="boxRegistroCheck">
+              <Link className="btnManu">
+                <span className="editP">Editar registros</span>
+              </Link>
 
-            <Link className="btnManu">
-              <span className="editP">Checklist</span>
-            </Link>
+              <Link className="btnManu">
+                <span className="editP">Checklist</span>
+              </Link>
+            </div>
           </div>
         </div>
       </main>

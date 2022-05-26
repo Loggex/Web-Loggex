@@ -24,8 +24,8 @@ main{
 }
 
 .containerRota{
-    width: 50vw;
-    height: 70vh;
+    width: 63vw;
+    height: 75vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ main{
 .infoPergunta{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     padding-left: 10px;
     margin: 0px;
 }
@@ -66,13 +66,16 @@ main{
     font-family: 'Sen', sans-serif;
     font-weight: bold;
     font-size: 40px;
-    padding-left: 15px;
+    padding-left: 5px;
+    padding-top: 25px;
     height: 40px;
+    margin: 0;
+    width: 100%;
 }
 
 
 .infoResposta{
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Sen', sans-serif;
     padding-left: 8px;
 }
@@ -81,6 +84,7 @@ main{
     font-family: 'Sen', sans-serif;
     padding-left: 8px;
     margin: 0px;
+    padding-bottom: 15px;
 }
 
 

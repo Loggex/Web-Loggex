@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from "axios";
 import Navbar from '../../Components/Navbar';
-import check from '../../assets/checkmark.svg';
-import chevron from '../../assets/chevronDir.svg';
-import { GoNote } from "react-icons/go";
 import { MdOutlineCheckCircle } from "react-icons/md";
-import { IoCalendarOutline } from "react-icons/io5";
-import { BiMessageCheck } from "react-icons/bi";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdCar } from "react-icons/io";
-import { GiBackwardTime } from "react-icons/gi";
 import { GiSmartphone } from "react-icons/gi";
 import { AiOutlineMail } from "react-icons/ai";
 import api from "../../Services/api"
@@ -19,18 +11,7 @@ import { Link } from 'react-router-dom';
 
 export default function Motorista() {
 
-    /* const [user, setUser] = useState();
-
-    useEffect(() => {
-        api
-          .get("/usuarios/2")
-          .then((response) => setUser(response.data))
-          .catch((err) => {
-            console.error("ops! ocorreu um erro" + err);
-          });
-      }, []);
- */
-
+    
     return (
         <div className='backgroundapp'>
             <Navbar></Navbar>

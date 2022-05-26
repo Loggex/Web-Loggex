@@ -19,7 +19,7 @@
     /* margin-top:; */
 }
 
-.fundoCadastro{
+.fundoCadastroCM{
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -33,6 +33,7 @@
 
 h1{
     margin-bottom: 0;
+    font-size: 30px;
 }
 
 .formCadastro{
@@ -80,18 +81,26 @@ h3{
 
 .inputDiv input{
     width: 100%;
-    height: 60%;
-    border-radius: 15px;
-    padding-left: 10px;
-    border-width: 1px;
-    /* margin-top: ; */
-    /* border: 50px; */
+    border: 0;
+    border-bottom: 1px solid #9c9c9c;
+    outline: 0;
+    font-size: 16px;
+    color: #424242;
+    font-family: "Sen", sans-serif;
+    background: transparent;
+    transition: border-color 0.2s;
 }
 
 .inputDiv select{
-    width: 103%;
-    height: 70%;
-    border-radius: 5px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #9c9c9c;
+    outline: 0;
+    font-size: 16px;
+    color: #424242;
+    font-family: "Sen", sans-serif;
+    background: transparent;
+    transition: border-color 0.2s;
 }
 
 #botaoCadastrar{

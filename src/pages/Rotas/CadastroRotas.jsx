@@ -1,6 +1,6 @@
 import Navbar from "../../Components/Navbar";
 import "../../assets/cadastroRotas.css";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 export default function CadastroRotas(){
@@ -68,7 +68,7 @@ export default function CadastroRotas(){
                 <div className="container">
                     <div className="fundoCadastro">
                         <h1>Cadastrar nova rota</h1>
-                            <form action="" className="formCadastro">
+                            <form action="" onSubmit={CadastrarRota} className="formCadastro">
                                 <div className="formularios">
                                     <div className="formColuna">
                                         <div className="inputDiv">

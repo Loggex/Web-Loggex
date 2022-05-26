@@ -1,7 +1,7 @@
 import Navbar from "../../Components/Navbar";
 import usuarioIndef from "../../assets/Ellipse 1.svg"
 import "../../assets/cadastroMotorista.css";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 export default function CadastroMotorista(){
@@ -14,7 +14,7 @@ export default function CadastroMotorista(){
     const [senhaInput, setSenha] = useState('');
     const [confirmSenhaInput, setConfirmSenha] = useState('');
     const [celInput, setCel] = useState('');
-    const [imgPerfilInput, setImg] = useState('');
+    //const [imgPerfilInput, setImg] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
     function cadastrarMotorista(motorista) {
@@ -23,8 +23,15 @@ export default function CadastroMotorista(){
         setIsLoading(true);
 
 
-            axios.post('http://localhost:5000/api/motorista', {
+            axios.post('http://localhost:5000/api/motoristas', {
                 cnh: cnhInput,
+                nome: nomeInput,
+                cpf: cpfInput,
+                sexo: sexoInput,
+                email: emailInput,
+                senha: senhaInput,
+                confirmarSenha: confirmSenhaInput,
+                cell: celInput 
             }, {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
@@ -32,16 +39,16 @@ export default function CadastroMotorista(){
             })
                 .then(resposta => {
                     if (resposta.status === 201) {
-                        console.log('Veiculo cadastrado!');
+                        console.log('Motorista cadastrado!');
     
                         setNome('')
-                        setCpf('')
-                        setCnh('')
-                        setSexo('')
+                        setCpf(0)
+                        setCnh(0)
+                        setSexo(false)
                         setEmail('')
                         setSenha('')
                         setConfirmSenha('')
-                        setCel('')
+                        setCel(0)
                         setIsLoading(false);
                     }
                 })
@@ -64,9 +71,9 @@ export default function CadastroMotorista(){
                             <input value="Escolher imagem" type="submit"/>
                         </div>
                     </div>
-                    <div className="fundoCadastro">
+                    <div className="fundoCadastroCM">
                         <h1>Cadastrar um motorista</h1>
-                            <form action="" className="formCadastro">
+                            <form action="" onSubmit={cadastrarMotorista} className="formCadastro">
                                 <div className="formularios">
                                     <div className="formColuna">
                                         <div className="inputDiv">

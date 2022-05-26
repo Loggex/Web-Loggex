@@ -196,7 +196,7 @@
   border: none;
   border-radius: 10px;
   align-items: center;
-  width: 40%;
+  width: 55%;
   height: 8%;
   margin-top: 20px;
   justify-content: center;
@@ -355,8 +355,8 @@ margin-top: 5px;
 }
 
 .imgMotorista{
-  width: 120px;
-  height: 120px;
+  width: 19%;
+  height: 76%;
   border-radius: 50%;
   margin-left: 20px;
 }

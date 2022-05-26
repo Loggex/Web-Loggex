@@ -98,7 +98,8 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    padding-top: 10px;
 
 
 }
@@ -108,7 +109,7 @@ main{
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    width: 66%;
+    width: 80%;
 
 
 }
@@ -117,7 +118,8 @@ main{
     flex-direction: row;
     align-items: center;
     width: 83%;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    padding-left: 13px;
 
 
 }
@@ -127,7 +129,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 30px;
+    padding-left: 25px;
 }
 
 .containerprinc{
@@ -145,7 +147,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .containerveiculo2{
@@ -204,7 +206,7 @@ main{
 
 .btnManu{
     background: #060657;
-    width: 50%;
+    width: 32%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -217,6 +219,12 @@ main{
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+}
+
+.boxRegistroCheck{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 

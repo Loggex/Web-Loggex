@@ -38,9 +38,7 @@ export default function Veiculos() {
 
   const history = useHistory();
 
-  const onVeiculo = (e) => {
-    history.push("/Veiculo");
-  };
+
 
   return (
     <div className="backgroundapp">
