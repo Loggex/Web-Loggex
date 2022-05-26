@@ -23,9 +23,22 @@ export default function CadastroMotorista(){
         setIsLoading(true);
 
 
+            axios.post('http://localhost:5000/api/usuarios',{
+                idTipoUsuario: 2,
+                nome: nomeInput,
+                email: emailInput,
+                senha: senhaInput,
+                sexo: sexoInput,
+                cpf: cpfInput
+            }, {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+                }
+            })
             axios.post('http://localhost:5000/api/motorista', {
-                
-            cnh: cnhInput
+            idUsuario: 1,
+            cnh: cnhInput,
+            numCelular: celInput
             }, {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
