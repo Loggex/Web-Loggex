@@ -64,7 +64,7 @@ export default function CadastroRotas(){
     return(
         <div className="backgroundapp">
             <Navbar></Navbar>
-            <main>
+            <main  className="maincomnav">
                 <div className="container">
                     <div className="fundoCadastro">
                         <h1>Cadastrar nova rota</h1>

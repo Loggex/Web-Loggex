@@ -52,6 +52,10 @@ h1{
     
 }
 
+.maincomnav{
+    margin-left: 20vw;
+  }
+
 .formColuna{
     display: flex;
     flex-direction: column;

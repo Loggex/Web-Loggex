@@ -16,7 +16,7 @@ export default function Rota({route, navigation}) {
   return (
     <div className="backgroundapp">
       <Navbar />
-      <main>
+      <main className="maincomnav">
         <div className="containerInfoRota">
           <div className="containerRota">
             <div className="containerBox">

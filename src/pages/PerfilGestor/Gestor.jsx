@@ -36,7 +36,7 @@ export default function Gestor() {
   return (
     <div className="backgroundapp">
       <Navbar></Navbar>
-      <main>
+      <main className="maincomnav">
         <div className="boxGestor">
           <img
             src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"

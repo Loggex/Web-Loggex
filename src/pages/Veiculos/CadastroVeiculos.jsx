@@ -62,47 +62,47 @@ export default function CadastroVeiculos(){
     return(
         <div className="backgroundapp">
             <Navbar></Navbar>
-            <main>
+            <main className="maincomnav">
                 <div className="container">
                     <div className="fundoCadastroV">
                         <h1>Cadastrar um veículo</h1>
                             <form action="" onSubmit={cadastrarVeiculo}  className="formCadastroV">
                                 <div className="formulariosV">
                                     <div className="formColunaV">
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                         <h3>Placa</h3>
                                         <input type="text" onChange={ (campo) => setPlaca(campo.target.value) } />
                                         </div>
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                         <h3>Cor</h3>
                                         <input type="text" onChange={ (campo) => setCor(campo.target.value) }/>
                                         </div>
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                         <h3>Ano de Fabricação</h3>
                                         <input type="text" onChange={ (campo) => setAno(campo.target.value) } />
                                         </div>
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                             <h3>ID do tipo de veículo</h3>
                                             <input type="text" onChange={ (campo) => setTipo(campo.target.value) }/>
                                         </div>
                                     </div>
                                     <div className="formColunaV">
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                         <h3>Tem seguro?</h3>
                                         <select name="" onChange={ (campo) => setSeguro(campo.target.value) } id="selectSeguro">
                                             <option value="true">Sim</option>
                                             <option value="false">Não</option>
                                             </select>
                                         </div>
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                         <h3>Chassi</h3>
                                         <input type="text" onChange={ (campo) => setChassi(campo.target.value) }/>
                                         </div>
-                                        <div className="inputDivV">
+                                        <div className="inputDivVei">
                                         <h3>Quilometragem</h3>
                                         <input type="text"  onChange={ (campo) => setKm(campo.target.value) }/>
                                         </div>
-                                        <div className="inputDivV" id="estadoVeiculo">
+                                        <div className="inputDivVei" id="estadoVeiculo">
                                             <h3>Estado do Veículo</h3>
                                             <select name="estadoVeiculo" onChange={ (campo) => setEstado(campo.target.value) } id="">
                                                 <option value="true">Funcional</option>

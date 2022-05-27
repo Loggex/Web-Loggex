@@ -15,7 +15,7 @@ export default function Motorista() {
     return (
         <div className='backgroundapp'>
             <Navbar></Navbar>
-            <main>
+            <main className="maincomnav">
                 <div className="boxMotorista">
                     <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="imagem do carro" className='imgVeiculo' />
                 </div>
