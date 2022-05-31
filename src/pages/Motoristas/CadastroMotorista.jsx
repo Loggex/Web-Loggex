@@ -4,9 +4,14 @@ import "../../assets/cadastroMotorista.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import CellInput from "../../Components/CellInput";
+import cpfInput from "../../Components/cpfInput"
+
+import InputMask from "react-input-mask"
+
 export default function CadastroMotorista() {
   const [nomeInput, setNome] = useState("");
-  const [cpfInput, setCpf] = useState("");
+  const [cpfIn, setCpf] = useState("");
   const [cnhInput, setCnh] = useState("");
   const [sexoInput, setSexo] = useState("");
   const [emailInput, setEmail] = useState("");
@@ -30,7 +35,7 @@ export default function CadastroMotorista() {
           nome: nomeInput,
           sexo: sexoInput,
           imgPerfil: "teste.png",
-          cpf: cpfInput,
+          cpf: cpfIn,
         },
         {
           headers: {
@@ -52,7 +57,7 @@ export default function CadastroMotorista() {
           setIsLoading(false);
 
           axios
-            .get("http://localhost:5000/api/usuarios/cpf/" + cpfInput, {
+            .get("http://localhost:5000/api/usuarios/cpf/" + cpfIn, {
               headers: {
                 Authorization:
                   "Bearer " + localStorage.getItem("usuario-login"),
@@ -145,19 +150,21 @@ export default function CadastroMotorista() {
                   </div>
                   <div className="inputDiv">
                     <h3>CPF</h3>
-                    <input
-                      type="text"
-                      onChange={(campo) => setCpf(campo.target.value)}
-                    />
+                    <InputMask
+                      onChange={(event) => setCpf(event.target.value)}
+                      value={cpfIn}
+                      mask="999.999.999-99"
+                    ></InputMask>
                   </div>
                 </div>
-                <div className="formColuna">
+                <div className="formColunaCM">
                   <div className="inputDiv">
                     <h3>CNH</h3>
-                    <input
-                      type="text"
+                    <InputMask
+                      mask="999999999999"
                       onChange={(campo) => setCnh(campo.target.value)}
-                    />
+                    >
+                      </InputMask>
                   </div>
                   <div className="inputDiv">
                     <h3>Sexo</h3>
@@ -171,16 +178,15 @@ export default function CadastroMotorista() {
                       <option value="outros">Outro</option>
                     </select>
                   </div>
-                  
                 </div>
               </div>
-                  <div className="inputDiv">
-                    <h3>Número de celular</h3>
-                    <input
-                      type="text"
-                      onChange={(campo) => setCel(campo.target.value)}
-                    />
-                  </div>
+              <div className="inputDiv">
+                <h3>Número de celular</h3>
+                <CellInput
+                  onChange={(event) => setCel(event.target.value)}
+                  value={celInput}
+                ></CellInput>
+              </div>
               <button type="submit" name="cadastrar" id="botaoCadastrar">
                 Cadastrar
               </button>

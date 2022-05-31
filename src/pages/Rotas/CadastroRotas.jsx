@@ -66,7 +66,7 @@ export default function CadastroRotas(){
             <Navbar></Navbar>
             <main  className="maincomnav">
                 <div className="container">
-                    <div className="fundoCadastro">
+                    <div className="fundoCadastroCR">
                         <h1>Cadastrar nova rota</h1>
                             <form action="" onSubmit={CadastrarRota} className="formCadastro">
                                 <div className="formularios">
