@@ -36,6 +36,8 @@ export default function Motoristas() {
             })
 
             .catch(erro => console.log(erro));
+
+            
     };
 
     useEffect( () =>{

@@ -30,7 +30,7 @@ export default function CadastroMotorista() {
             nome: nomeInput,
             sexo: sexoInput,
             imgPerfil: 'teste.png',
-            cpf: cpfInput,
+            cpf: cpfInput
 
         }, {
             headers: {
@@ -40,16 +40,9 @@ export default function CadastroMotorista() {
             .then(resposta => {
                 if (resposta.status === 201) {
                     console.log('Usuario cadastrado!');
-                    // setNome('')
-                    // setCpf('')
-                    // setCnh('')
-                    // setSexo('')
-                    // setEmail('')
-                    // setSenha('')
-                    // setConfirmSenha('')
-                    // setCel('')
-                    setIsLoading(false);
-
+                    console.log("Cpf buscado: " + cpfInput);
+                    
+                    //Get de usuários
                     axios.get("http://localhost:5000/api/usuarios/cpf/" + cpfInput, {
                         headers: {
                             Authorization: "Bearer " + localStorage.getItem("usuario-login"),
@@ -57,9 +50,12 @@ export default function CadastroMotorista() {
                     })
                         .then((resposta) => {
                             if (resposta.status === 200) {
-                                console.log("Usuario buscado")
+                                console.log("Usuario buscado com sucesso");
+                                //Usuário vazio
                                 setIdUsuarioBusca(resposta.data);
-
+                                console.log("Usuário encontrado: " + idUsuarioBusca);
+                                
+                                //Post de motorista
                                 axios.post('http://localhost:5000/api/motoristas', {
 
                                     idUsuario: idUsuarioBusca.idUsuario,
@@ -74,15 +70,6 @@ export default function CadastroMotorista() {
                                     .then(resposta => {
                                         if (resposta.status === 201) {
                                             console.log('Motorista cadastrado!');
-
-                                            // setNome('')
-                                            // setCpf('')
-                                            // setCnh('')
-                                            // setSexo('')
-                                            // setEmail('')
-                                            // setSenha('')
-                                            // setConfirmSenha('')
-                                            // setCel('')
                                             setIsLoading(false);
                                         }
                                     })
@@ -105,7 +92,14 @@ export default function CadastroMotorista() {
                 setIsLoading(false)
             }, 5000));
 
-
+        // setNome('')
+        // setCpf('')
+        // setCnh('')
+        // setSexo('')
+        // setEmail('')
+        // setSenha('')
+        // setConfirmSenha('')
+        // setCel('')
 
 
     };
@@ -142,9 +136,9 @@ export default function CadastroMotorista() {
                                     <div className="inputDiv">
                                         <h3>Sexo</h3>
                                         <select name="Sexo" onChange={(campo) => setSexo(campo.target.value)} id="selectSexo">
-                                            <option value="masculino">Masculino</option>
-                                            <option value="feminino">Feminino</option>
-                                            <option value="outros">Outro</option>
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Feminino">Feminino</option>
+                                            <option value="Outros">Outro</option>
                                         </select>
                                     </div>
                                 </div>
