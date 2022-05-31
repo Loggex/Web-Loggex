@@ -16,20 +16,35 @@ main {
 
 .containerInfoPeca {
   width: 100%;
-  height: 75%;
+  height: 85%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
-.containerPeca {
+.containerPecaDos {
   width: 50vw;
-  height: 40vh;
+  height: 45vh;
   background-color: white;
+  margin-left: 37vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 6px 9px 4px -1px rgb(0 0 0 / 25%);
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.containerPecaUno {
+  width: 50vw;
+  height: 85vh;
+  background-color: white;
+  margin-left: 37vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 6px 9px 4px -1px rgb(0 0 0 / 25%);
   justify-content: space-around;
 }
 
@@ -41,31 +56,54 @@ main {
   flex-direction: column;
 }
 
-.containerPeca h1 {
-  font-size: 31px;
+.containerPecaUno h1 {
+  font-size: 27px;
+  font-family: "Sen", sans-serif;
+  font-weight: bold;
+}
+.containerPecaDos h1 {
+  font-size: 27px;
   font-family: "Sen", sans-serif;
   font-weight: bold;
 }
 
-.containerPeca p {
+.containerPecaUno p {
   font-family: "Sen", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.containerPecaDos p {
+  font-family: "Sen", sans-serif;
+  font-size: 16px;
   font-weight: bold;
 }
 
-.containerPeca input {
-  width: 88%;
-  height: 30px;
-  border-width: 1px;
-  border-radius: 13px;
-  padding-left: 10px;
+.containerPecaUno input {
+  width: 300px;
+  border: 0;
+  border-bottom: 1px solid #9c9c9c;
+  outline: 0;
+  font-size: 16px;
+  color: #424242;
   font-family: "Sen", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.containerPecaDos input {
+  width: 300px;
+  border: 0;
+  border-bottom: 1px solid #9c9c9c;
+  outline: 0;
+  font-size: 16px;
+  color: #424242;
+  font-family: "Sen", sans-serif;
+  background: transparent;
+  transition: border-color 0.2s;
 }
 
 .boxInput {
   width: 60%;
+  padding-top: 20px;
 }
 
 .containerBtn {

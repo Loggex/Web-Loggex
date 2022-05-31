@@ -6,6 +6,7 @@ import "../../assets/Pecas.css";
 
 export default function CadastroPecas() {
   const [nomePeca, setNomePeca] = useState("");
+  const [nomeVeiculo, setNomeVeiculo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -53,16 +54,67 @@ console.log(nomePeca);
       <Navbar />
       <main>
         <div className="containerInfoPeca">
-          <div className="containerPeca">
+          <div className="containerPecaUno">
             <div className="containerPeca2">
-              <h1>Cadastrar tipo peças do veículo</h1>
+              <h1>Cadastrar tipo veículo</h1>
 
               <div className="inputContainer">
                 <div className="boxInput">
-                  <p>Nome da peça</p>
+                  <p>Nome do tipo veículo
+                  </p>
                   <input
                    type="text"
-                   placeholder="Nome da peça"
+                   placeholder="Nome do tipo veículo"
+                   value={nomeVeiculo}
+                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
+                   />
+                </div>
+                <div className="boxInput">
+                  <p>Nome do tipo carreta
+                  </p>
+                  <input
+                   type="text"
+                   placeholder="Nome do tipo carreta"
+                   value={nomeVeiculo}
+                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
+                   />
+                </div>
+                <div className="boxInput">
+                  <p>Nome do modelo do veículo
+                  </p>
+                  <input
+                   type="text"
+                   placeholder="Nome do modelo do veículo"
+                   value={nomeVeiculo}
+                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
+                   />
+                </div>
+                <div className="boxInput">
+                  <p>Nome da carroceria
+                  </p>
+                  <input
+                   type="text"
+                   placeholder="Nome da carroceria"
+                   value={nomeVeiculo}
+                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
+                   />
+                </div>
+              </div>
+            </div>
+            <div className="containerBtn">
+              <button type="submit">Cadastrar</button>
+            </div>
+          </div>
+          <div className="containerPecaDos">
+            <div className="containerPeca2">
+              <h1>Cadastrar peças do veículo</h1>
+
+              <div className="inputContainer">
+                <div className="boxInput">
+                  <p>Nome do tipo de peça</p>
+                  <input
+                   type="text"
+                   placeholder="Nome do tipo de peça"
                    value={nomePeca}
                    onChange={(campo) => setNomePeca(campo.target.value)}
                    />

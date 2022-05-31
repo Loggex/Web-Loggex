@@ -26,6 +26,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     align-items: center;
+    margin-left: 30vw;
 }
 
 .containerPerfil img{
@@ -67,9 +68,10 @@
     align-items: center;
     justify-content: center;
     width: 50vw;
-    height: 75vh;
+    height: 65vh;
     box-shadow: 6px 9px 4px -1px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    margin-left:30vw;
 }
 
 h1{
@@ -92,11 +94,11 @@ h1{
     
 }
 
-.formColuna{
+.formColunaCM{
     display: flex;
     flex-direction: column;
     width: 40%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 100%;
 }
 
@@ -118,6 +120,8 @@ h3{
     /* margin-top: ; */
     /* border: 50px; */
 }
+
+
 
 .inputDiv select{
     width: 100%;
