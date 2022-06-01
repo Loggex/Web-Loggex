@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
+import InputMask from "react-input-mask"
+
 
 export default function CadastroVeiculos() {
   const [tipoVeiculoInput, setTipo] = useState(0);
@@ -138,10 +140,14 @@ export default function CadastroVeiculos() {
                   </div>
                   <div className="inputDivVei">
                     <h3>Quilometragem</h3>
-                    <input
-                      type="text"
+                    <InputMask
+                      
                       onChange={(campo) => setKm(campo.target.value)}
-                    />
+                      value={quilometragemInput}
+                      mask="999"
+                    >
+
+                      </InputMask>
                   </div>
 
                   <div className="inputDivVei" id="estadoVeiculo">

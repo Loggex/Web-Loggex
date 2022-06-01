@@ -14,9 +14,6 @@ export default function CadastroMotorista() {
   const [cpfIn, setCpf] = useState("");
   const [cnhInput, setCnh] = useState("");
   const [sexoInput, setSexo] = useState("");
-  const [emailInput, setEmail] = useState("");
-  const [senhaInput, setSenha] = useState("");
-  const [confirmSenhaInput, setConfirmSenha] = useState("");
   const [celInput, setCel] = useState("");
   const [imgPerfilInput, setImg] = useState("");
   const [idUsuarioBusca, setIdUsuarioBusca] = useState("");
