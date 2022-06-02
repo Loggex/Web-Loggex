@@ -45,7 +45,7 @@ export default function Checklist() {
                                     <div className='posChecklist'>
                                         <div className='infoMotorista'>
                                             <span className='nomePeca'>{peca.idTipoPecaNavigation.nomePeça}</span>
-                                            <span  className='ALteracaoPeca'>Última alteração em:</span>
+                                            <span className='ALteracaoPeca'>Última alteração em:</span>
 
                                         </div>
                                     </div>

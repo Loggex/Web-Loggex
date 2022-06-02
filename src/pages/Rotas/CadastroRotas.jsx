@@ -2,6 +2,7 @@ import Navbar from "../../Components/Navbar";
 import "../../assets/cadastroRotas.css";
 import React, { useState } from 'react';
 import axios from 'axios';
+import InputMask from "react-input-mask"
 
 export default function CadastroRotas(){
     const [origemInput, setOrigem] = useState('');
@@ -81,7 +82,7 @@ export default function CadastroRotas(){
                                         </div>
                                         <div className="inputDiv">
                                         <h3>Partida</h3>
-                                        <input type="text" onChange={(campo) => setPartida(campo.target.value)}/>
+                                        <InputMask type="text" mask="99:99" onChange={(campo) => setPartida(campo.target.value)}/>
                                         </div>
                                         <div className="inputDiv">
                                         <h3>Carga</h3>
@@ -103,7 +104,7 @@ export default function CadastroRotas(){
                                         </div>
                                         <div className="inputDiv">
                                         <h3>Chegada</h3>
-                                        <input type="text" onChange={(campo) => setChegada(campo.target.value)}/>
+                                        <InputMask type="text" mask="99:99" onChange={(campo) => setPartida(campo.target.value)}/>
                                         </div>
                                         <div className="inputDiv">
                                         <h3>Descrição</h3>
@@ -111,7 +112,7 @@ export default function CadastroRotas(){
                                         </div>
                                         <div className="inputDiv">
                                         <h3>Volume da carga</h3>
-                                        <input type="text" onChange={(campo) => setVolume(campo.target.value)}/>
+                                        <InputMask type="text" mask="99³" onChange={(campo) => setPartida(campo.target.value)}/>
                                         </div>
                                     </div>
                                 </div>

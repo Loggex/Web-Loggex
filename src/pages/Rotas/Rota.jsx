@@ -5,12 +5,37 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { BsTruck } from "react-icons/bs";
 import { RiSteering2Line } from "react-icons/ri";
 import imageRota from "../../assets/imageRota.svg";
+import { useState, useEffect } from "react";
 
 import "../../assets/Rota.css";
 
-export default function Rota({route, navigation}) {
+export default function Rota() {
 
-    /* const rota= route.params */
+    const [listarota, setListaRota] = useState()
+
+    async function buscarRota() {
+        await axios(
+          "http://localhost:5000/api/Rotas/idRota" +
+            window.location.pathname.split("/")[2],
+          {
+            headers: {
+              Authorization: "Bearer " + localStorage.getItem("usuario-login"),
+            },
+          }
+        )
+          .then((resposta) => {
+            if (resposta.status === 200) {
+              setListaRota(resposta.data);
+            }
+          })
+    
+          .catch((erro) => console.log(erro));
+      }
+    
+      useEffect(() => {
+        buscarRota();
+      });
+    
 
 
   return (

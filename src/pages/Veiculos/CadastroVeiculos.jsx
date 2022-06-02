@@ -3,9 +3,9 @@ import "../../assets/cadastroVeiculo.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import InputMask from "react-input-mask"
-
+import InputMask from "react-input-mask";
 
 export default function CadastroVeiculos() {
   const [tipoVeiculoInput, setTipo] = useState(0);
@@ -17,11 +17,31 @@ export default function CadastroVeiculos() {
   const [quilometragemInput, setKm] = useState(0);
   const [estadoVeiculoInput, setEstado] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [Opcoes, setOpcoes] = useState();
 
   const history = useHistory();
   const navCad = (e) => {
     history.push("/pecas");
   };
+
+  async function buscarTiposVeiculos() {
+    await axios("http://localhost:5000/api/TiposVeiculos", {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("usuario-login"),
+      },
+    })
+      .then((resposta) => {
+        if (resposta.status === 200) {
+          setOpcoes(resposta.data);
+        }
+      })
+
+      .catch((erro) => console.log(erro));
+  }
+
+  useEffect(() => {
+    buscarTiposVeiculos();
+  });
 
   function cadastrarVeiculo(veiculo) {
     veiculo.preventDefault();
@@ -87,10 +107,11 @@ export default function CadastroVeiculos() {
                 <div className="formColunaV">
                   <div className="inputDivVei">
                     <h3>Placa</h3>
-                    <input
+                    <InputMask
                       type="text"
                       onChange={(campo) => setPlaca(campo.target.value)}
-                    />
+                      maxLength="7"
+                    ></InputMask>
                   </div>
                   <div className="inputDivVei">
                     <h3>Cor</h3>
@@ -107,25 +128,34 @@ export default function CadastroVeiculos() {
                     />
                   </div>
                   <div className="inputDivVei">
-                    <h3>tipo de veículo</h3>
-                    <select
-                      onChange={(campo) => setTipo(campo.target.value)}
-                    >
-                      <option>Teste</option>
-                      <option>Teste2</option>
-                      </select>
+                  <h3>tipo de veículo</h3>
+                        <select
+                          onChange={(campo) => setTipo(campo.target.value)}
+                          >
+
+                            <option>teste</option>
+                         {/*  {Opcoes.map((typeVeiculo) => {
+                            return (
+                              <option value={typeVeiculo.idTipoVeiculo}></option>
+                              );
+                            })} */}
+                        </select>
                   </div>
-                  <Link onClick={navCad} className="cadTipoVei">Cadastrar um tipo de Veiculo</Link>
+                  <Link onClick={navCad} className="cadTipoVei">
+                    Cadastrar um tipo de Veiculo
+                  </Link>
                 </div>
-                
+
                 <div className="formColunaV">
                   <div className="inputDivVei">
                     <h3>Tem seguro?</h3>
                     <select
                       name=""
-                      onChange={console.log(seguroInput),(campo) => setSeguro(campo.target.value)}
+                      onChange={
+                        (console.log(seguroInput),
+                        (campo) => setSeguro(campo.target.value))
+                      }
                       id="selectSeguro"
-                      
                     >
                       <option value="true">Sim</option>
                       <option value="false">Não</option>
@@ -141,27 +171,26 @@ export default function CadastroVeiculos() {
                   <div className="inputDivVei">
                     <h3>Quilometragem</h3>
                     <InputMask
-                      
                       onChange={(campo) => setKm(campo.target.value)}
                       value={quilometragemInput}
                       mask="999"
-                    >
-
-                      </InputMask>
+                    ></InputMask>
                   </div>
 
                   <div className="inputDivVei" id="estadoVeiculo">
                     <h3>Estado do Veículo</h3>
                     <select
                       name="estadoVeiculo"
-                      onChange={console.log(estadoVeiculoInput),(campo) => setEstado(campo.target.value)}
+                      onChange={
+                        (console.log(estadoVeiculoInput),
+                        (campo) => setEstado(campo.target.value))
+                      }
                       id=""
                     >
                       <option value="true">Funcional</option>
                       <option value="false">Quebrado</option>
                     </select>
                   </div>
-                  
                 </div>
               </div>
               <button
