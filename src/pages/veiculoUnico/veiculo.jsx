@@ -131,7 +131,7 @@ export default function Veiculo() {
                 <span className="editP">Editar registros</span>
               </Link>
 
-              <Link className="btnManu">
+              <Link to={"/checklist/" + veiculo?.placa} className="btnManu">
                 <span className="editP">Checklist</span>
               </Link>
             </div>

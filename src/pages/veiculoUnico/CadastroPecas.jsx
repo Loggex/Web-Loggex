@@ -3,10 +3,15 @@ import axios from "axios";
 import Navbar from "../../Components/Navbar";
 
 import "../../assets/Pecas.css";
+import api from "../../Services/api";
 
 export default function CadastroPecas() {
   const [nomePeca, setNomePeca] = useState("");
   const [nomeVeiculo, setNomeVeiculo] = useState("");
+  const [nomeCarreta, setNomeCarreta] = useState("")
+  const [modeloVeiculo, setModeloVeiculo] = useState("")
+  const [nomeCarroceria, setNomeCarroceria] = useState("")
+  const [listaPecas, setListaPecas] = useState([])
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -16,38 +21,60 @@ export default function CadastroPecas() {
     evento.preventDefault();
 
     // define que uma requisição está em andamento
-    setIsLoading( true );
+    setIsLoading(true);
 
-    
+
     // faz a chamada para a API
     axios.post('http://localhost:5000/api/tipospecas', {
-        nomePeca : nomePeca
+      nomePeca: nomePeca
     }, {
-         headers : {
-            'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
-        } 
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+      }
     })
-    .then(resposta => {
+      .then(resposta => {
         // se o status code da resposta da requisição for igual a 201
         if (resposta.status === 201) {
-            // exibe a mensagem no console do navegador,
-            console.log('Tipo de peca cadastrado!');
-            // atualiza a lista de tipos de usuário automaticamente,
-            // reseta o valor do state titulo,
-            setNomePeca('');
-            // e volta o valor do state isLoading para false
-            setIsLoading( false );
+          // exibe a mensagem no console do navegador,
+          console.log('Tipo de peca cadastrado!');
+          // atualiza a lista de tipos de usuário automaticamente,
+          // reseta o valor do state titulo,
+          setNomePeca('');
+          // e volta o valor do state isLoading para false
+          setIsLoading(false);
         }
-    })
-    // caso ocorra algum erro, exibe no console do navegador este erro
-    // e volta o valor do state isLoading para false
-    .catch(erro => console.log(erro), setInterval(() => {
-        setIsLoading( false )
-    }, 5000));
-};
+      })
+      // caso ocorra algum erro, exibe no console do navegador este erro
+      // e volta o valor do state isLoading para false
+      .catch(erro => console.log(erro), setInterval(() => {
+        setIsLoading(false)
+      }, 5000));
+  };
 
-// exibe no console o valor do state titulo a cada alteração feita pelo usuário
-console.log(nomePeca);
+  function CadastrarPecas() {
+    setListaPecas([...listaPecas, nomePeca])
+    setNomePeca('')
+  }
+
+  async function CadastrarTipoVeiculo() {
+
+    let objTipoVeiculo = {
+      tipoCarreta: nomeCarreta,
+      tipoVeiculo: nomeVeiculo,
+      modeloVeiculo: modeloVeiculo,
+      tipoCarroceria: nomeCarroceria,
+      pecas: listaPecas
+    }
+
+    await api.post('/tiposveiculos', objTipoVeiculo, {
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
+      }
+    }).then(resposta => console.log(resposta))
+      .catch(error => console.log(error))
+  }
+
+  // exibe no console o valor do state titulo a cada alteração feita pelo usuário
 
   return (
     <div className="backgroundapp">
@@ -63,46 +90,46 @@ console.log(nomePeca);
                   <p>Nome do tipo veículo
                   </p>
                   <input
-                   type="text"
-                   placeholder="Nome do tipo veículo"
-                   value={nomeVeiculo}
-                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
-                   />
+                    type="text"
+                    placeholder="Nome do tipo veículo"
+                    value={nomeVeiculo}
+                    onChange={(campo) => setNomeVeiculo(campo.target.value)}
+                  />
                 </div>
                 <div className="boxInput">
                   <p>Nome do tipo carreta
                   </p>
                   <input
-                   type="text"
-                   placeholder="Nome do tipo carreta"
-                   value={nomeVeiculo}
-                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
-                   />
+                    type="text"
+                    placeholder="Nome do tipo carreta"
+                    value={nomeCarreta}
+                    onChange={(campo) => setNomeCarreta(campo.target.value)}
+                  />
                 </div>
                 <div className="boxInput">
                   <p>Nome do modelo do veículo
                   </p>
                   <input
-                   type="text"
-                   placeholder="Nome do modelo do veículo"
-                   value={nomeVeiculo}
-                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
-                   />
+                    type="text"
+                    placeholder="Nome do modelo do veículo"
+                    value={modeloVeiculo}
+                    onChange={(campo) => setModeloVeiculo(campo.target.value)}
+                  />
                 </div>
                 <div className="boxInput">
                   <p>Nome da carroceria
                   </p>
                   <input
-                   type="text"
-                   placeholder="Nome da carroceria"
-                   value={nomeVeiculo}
-                   onChange={(campo) => setNomeVeiculo(campo.target.value)}
-                   />
+                    type="text"
+                    placeholder="Nome da carroceria"
+                    value={nomeCarroceria}
+                    onChange={(campo) => setNomeCarroceria(campo.target.value)}
+                  />
                 </div>
               </div>
             </div>
             <div className="containerBtn">
-              <button type="submit">Cadastrar</button>
+              <button type="submit" onClick={() => CadastrarTipoVeiculo()}>Cadastrar</button>
             </div>
           </div>
           <div className="containerPecaDos">
@@ -113,18 +140,28 @@ console.log(nomePeca);
                 <div className="boxInput">
                   <p>Nome do tipo de peça</p>
                   <input
-                   type="text"
-                   placeholder="Nome do tipo de peça"
-                   value={nomePeca}
-                   onChange={(campo) => setNomePeca(campo.target.value)}
-                   />
+                    type="text"
+                    placeholder="Nome do tipo de peça"
+                    value={nomePeca}
+                    onChange={(campo) => setNomePeca(campo.target.value)}
+                  />
                 </div>
               </div>
             </div>
             <div className="containerBtn">
-              <button type="submit">Cadastrar</button>
+              <button onClick={() => CadastrarPecas()} type="submit">Cadastrar</button>
             </div>
+
           </div>
+          {
+            listaPecas.map((peca) => {
+              return (
+                <div className="containerPeca">
+                  <p>{peca}</p>
+                </div>
+              )
+            })
+          }
         </div>
       </main>
     </div>

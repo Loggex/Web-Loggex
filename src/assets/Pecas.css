@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Sura&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 * {
   padding: 0;
   text-decoration: none;
@@ -12,14 +13,25 @@ main {
   justify-content: center;
 }
 
-
-
 .containerInfoPeca {
   width: 100%;
   height: 85%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.containerPeca {
+  width: 50vw;
+  height: 10vh;
+  background-color: rgb(235, 229, 229);
+  margin-left: 37vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
 .containerPecaDos {
@@ -35,6 +47,7 @@ main {
   justify-content: space-around;
   margin-top: 50px;
 }
+
 .containerPecaUno {
   width: 50vw;
   height: 85vh;
@@ -61,6 +74,7 @@ main {
   font-family: "Sen", sans-serif;
   font-weight: bold;
 }
+
 .containerPecaDos h1 {
   font-size: 27px;
   font-family: "Sen", sans-serif;
@@ -72,6 +86,7 @@ main {
   font-size: 16px;
   font-weight: bold;
 }
+
 .containerPecaDos p {
   font-family: "Sen", sans-serif;
   font-size: 16px;
@@ -89,6 +104,7 @@ main {
   background: transparent;
   transition: border-color 0.2s;
 }
+
 .containerPecaDos input {
   width: 300px;
   border: 0;
@@ -114,7 +130,7 @@ main {
 }
 
 
-.containerBtn button{
+.containerBtn button {
   width: 40%;
   background: #060657;
   color: white;
@@ -123,10 +139,10 @@ main {
 
 }
 
-.containerPeca2{
+.containerPeca2 {
   width: 100%;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
 }

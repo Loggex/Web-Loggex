@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import InputMask from "react-input-mask"
 
-export default function CadastroRotas(){
+export default function CadastroRotas() {
     const [origemInput, setOrigem] = useState('');
     const [veiculoInput, setVeiculo] = useState('');
     const [partidaInput, setPartida] = useState('');
@@ -17,7 +17,7 @@ export default function CadastroRotas(){
     const [volumeInput, setVolume] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    function CadastrarRota(rota){
+    function CadastrarRota(rota) {
         rota.preventDefault();
 
         setIsLoading(true);
@@ -62,64 +62,64 @@ export default function CadastroRotas(){
             }, 5000));
     };
 
-    return(
+    return (
         <div className="backgroundapp">
             <Navbar></Navbar>
-            <main  className="maincomnav">
+            <main className="maincomnav">
                 <div className="container">
                     <div className="fundoCadastroCR">
                         <h1>Cadastrar nova rota</h1>
-                            <form action="" onSubmit={CadastrarRota} className="formCadastro">
-                                <div className="formularios">
-                                    <div className="formColuna">
-                                        <div className="inputDiv">
+                        <form action="" onSubmit={CadastrarRota} className="formCadastro">
+                            <div className="formularios">
+                                <div className="formColuna">
+                                    <div className="inputDiv">
                                         <h3>Origem</h3>
                                         <input type="text" />
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Veículo</h3>
-                                        <input type="text" onChange={(campo) => setVeiculo(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Partida</h3>
-                                        <InputMask type="text" mask="99:99" onChange={(campo) => setPartida(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Carga</h3>
-                                        <input type="text" onChange={(campo) => setCarga(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Peso da carga</h3>
-                                        <input type="text" onChange={(campo) => setPeso(campo.target.value)}/>
-                                        </div>
                                     </div>
-                                    <div className="formColuna">
-                                        <div className="inputDiv">
-                                        <h3>Destino</h3>
-                                        <input type="text" onChange={(campo) => setDestino(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Motorista</h3>
-                                        <input type="text" onChange={(campo) => setMotorista(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Chegada</h3>
-                                        <InputMask type="text" mask="99:99" onChange={(campo) => setPartida(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Descrição</h3>
-                                        <input type="text" onChange={(campo) => setDescricao(campo.target.value)}/>
-                                        </div>
-                                        <div className="inputDiv">
-                                        <h3>Volume da carga</h3>
-                                        <InputMask type="text" mask="99³" onChange={(campo) => setPartida(campo.target.value)}/>
-                                        </div>
+                                    <div className="inputDiv">
+                                        <h3>Veículo</h3>
+                                        <input type="text" onChange={(campo) => setVeiculo(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Partida</h3>
+                                        <InputMask type="text" mask="99:99" onChange={(campo) => setPartida(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Carga</h3>
+                                        <input type="text" onChange={(campo) => setCarga(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Peso da carga</h3>
+                                        <input type="text" onChange={(campo) => setPeso(campo.target.value)} />
                                     </div>
                                 </div>
-                                <button type="submit" name="cadastrar" id="botaoCadastrar">Cadastrar</button>
-                            </form>
-                            
-                               
+                                <div className="formColuna">
+                                    <div className="inputDiv">
+                                        <h3>Destino</h3>
+                                        <input type="text" onChange={(campo) => setDestino(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Motorista</h3>
+                                        <input type="text" onChange={(campo) => setMotorista(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Chegada</h3>
+                                        <InputMask type="text" mask="99:99" onChange={(campo) => setChegada(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Descrição</h3>
+                                        <input type="text" onChange={(campo) => setDescricao(campo.target.value)} />
+                                    </div>
+                                    <div className="inputDiv">
+                                        <h3>Volume da carga</h3>
+                                        <input type="text" onChange={(campo) => setVolume(campo.target.value)} />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" name="cadastrar" id="botaoCadastrar">Cadastrar</button>
+                        </form>
+
+
                     </div>
                 </div>
             </main>

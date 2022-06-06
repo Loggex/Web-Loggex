@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import InputMask from "react-input-mask";
+import api from "../../Services/api";
 
 export default function CadastroVeiculos() {
   const [tipoVeiculoInput, setTipo] = useState(0);
@@ -17,35 +18,35 @@ export default function CadastroVeiculos() {
   const [quilometragemInput, setKm] = useState(0);
   const [estadoVeiculoInput, setEstado] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [Opcoes, setOpcoes] = useState();
+  const [Opcoes, setOpcoes] = useState([]);
 
   const history = useHistory();
   const navCad = (e) => {
     history.push("/pecas");
   };
 
-  async function buscarTiposVeiculos() {
-    await axios("http://localhost:5000/api/TiposVeiculos", {
+  async function BuscarTiposVeiculos() {
+
+    await api.get('/tiposveiculos', {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("usuario-login"),
       },
-    })
-      .then((resposta) => {
-        if (resposta.status === 200) {
-          setOpcoes(resposta.data);
-        }
-      })
-
-      .catch((erro) => console.log(erro));
+    }
+    ).then((resposta) => {
+      if (resposta.status === 200) {
+        setOpcoes(resposta.data);
+        console.log('teste')
+        console.log(Opcoes)
+      }
+    }).catch((erro) => console.log(erro));
   }
 
   useEffect(() => {
-    buscarTiposVeiculos();
-  });
+    BuscarTiposVeiculos();
+  }, []);
 
   function cadastrarVeiculo(veiculo) {
     veiculo.preventDefault();
-
     setIsLoading(true);
 
     axios
@@ -84,10 +85,7 @@ export default function CadastroVeiculos() {
       })
 
       .catch(
-        (erro) => console.log(erro),
-        setInterval(() => {
-          setIsLoading(false);
-        }, 5000)
+        (erro) => console.log(erro)
       );
   }
 
@@ -128,18 +126,18 @@ export default function CadastroVeiculos() {
                     />
                   </div>
                   <div className="inputDivVei">
-                  <h3>tipo de veículo</h3>
-                        <select
-                          onChange={(campo) => setTipo(campo.target.value)}
-                          >
-
-                            <option>teste</option>
-                         {/*  {Opcoes.map((typeVeiculo) => {
-                            return (
-                              <option value={typeVeiculo.idTipoVeiculo}></option>
-                              );
-                            })} */}
-                        </select>
+                    <h3>tipo de veículo</h3>
+                    <select
+                      onChange={(campo) => setTipo(campo.target.value)}
+                    >
+                      {
+                        Opcoes.map((opcao) => {
+                          return (
+                            <option value={opcao.idTipoVeiculo}>{opcao.modeloVeiculo}</option>
+                          )
+                        })
+                      }
+                    </select>
                   </div>
                   <Link onClick={navCad} className="cadTipoVei">
                     Cadastrar um tipo de Veiculo
@@ -152,8 +150,8 @@ export default function CadastroVeiculos() {
                     <select
                       name=""
                       onChange={
-                        (console.log(seguroInput),
-                        (campo) => setSeguro(campo.target.value))
+                        (
+                          (campo) => setSeguro(campo.target.value))
                       }
                       id="selectSeguro"
                     >
@@ -182,8 +180,8 @@ export default function CadastroVeiculos() {
                     <select
                       name="estadoVeiculo"
                       onChange={
-                        (console.log(estadoVeiculoInput),
-                        (campo) => setEstado(campo.target.value))
+                        (
+                          (campo) => setEstado(campo.target.value))
                       }
                       id=""
                     >
