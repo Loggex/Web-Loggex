@@ -24,7 +24,7 @@ export default function Motoristas() {
 
     async function buscarMotoristas() {
 
-        await axios('http://localhost:5000/api/motoristas', {
+        await axios('https://loggex.azurewebsites.net/api/motoristas', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -51,7 +51,7 @@ export default function Motoristas() {
                         listaMotorista.map((motorista) => {
                             return (
                                 <div className='card'  key={motorista.idMotorista}>
-                                    <img src={'http://localhost:5000/StaticFiles/Images/' + motorista.idUsuarioNavigation.imgPerfil} alt="imagem do motorista" className='imgMotorista' />
+                                    <img src={'https://loggex.azurewebsites.net/StaticFiles/Images/' + motorista.idUsuarioNavigation.imgPerfil} alt="imagem do motorista" className='imgMotorista' />
 
                                     <div className='posMotorista'>
                                         <div className='infoMotorista'>

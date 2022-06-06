@@ -32,7 +32,7 @@ export default function Navbar(){
 
        function buscarUsuario() {
 
-         axios('http://localhost:5000/api/usuarios/' + parseJwt().jti , {
+         axios('https://loggex.azurewebsites.net/api/usuarios/' + parseJwt().jti , {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }

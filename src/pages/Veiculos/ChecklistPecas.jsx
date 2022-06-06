@@ -21,7 +21,7 @@ export default function Checklist() {
         let placa = location.pathname.split('/')[2]
         console.log(placa)
 
-        await axios('http://localhost:5000/api/pecas/checklist/' + placa, {
+        await axios('https://loggex.azurewebsites.net/api/pecas/checklist/' + placa, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -65,11 +65,11 @@ export default function Checklist() {
                                                 <div className='containerModal'>
                                                     <div className='boxImg'>
                                                         <p>Imagem original</p>
-                                                        <img src={"http://localhost:5000/StaticFiles/Images/" + peca.imgPecaC} alt="" />
+                                                        <img src={"https://loggex.azurewebsites.net/StaticFiles/Images/" + peca.imgPecaC} alt="" />
                                                     </div>
                                                     <div className='boxImg'>
                                                         <p>Imagem atual</p>
-                                                        <img src={"http://localhost:5000/StaticFiles/Images/" + peca.imgPeca} alt="" />
+                                                        <img src={"https://loggex.azurewebsites.net/StaticFiles/Images/" + peca.imgPeca} alt="" />
                                                     </div>
                                                 </div>
                                             </Modal.Body>

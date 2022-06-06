@@ -4,8 +4,7 @@ import axios from 'axios';
 // define a função para chamada das requisições
 const api = axios.create({
   // define a URL base das requisições
-  baseURL: 'http://localhost:5000/api'
-
+  baseURL: 'https://loggex.azurewebsites.net/api'
 });
 
 

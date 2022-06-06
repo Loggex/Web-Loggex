@@ -32,7 +32,7 @@ export default function App() {
     cred.preventDefault();
 
     setIsLoading(true);
-        axios.post('http://localhost:5000/api/login/Gerente', {
+        axios.post('https://loggex.azurewebsites.net/api/login/Gerente', {
 
       
             email: emailInput,

@@ -24,7 +24,7 @@ export default function Veiculo() {
 
   async function buscarVeiculo() {
     await axios(
-      "http://localhost:5000/api/veiculos/placa/" +
+      "https://loggex.azurewebsites.net/api/veiculos/placa/" +
         window.location.pathname.split("/")[2],
       {
         headers: {

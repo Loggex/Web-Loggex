@@ -20,7 +20,7 @@ export default function Rotas(){
 
     async function buscarRotas() {
 
-        await axios('http://localhost:5000/api/rotas', {
+        await axios('https://loggex.azurewebsites.net/api/rotas', {
             headers : {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
