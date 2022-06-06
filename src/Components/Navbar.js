@@ -57,7 +57,7 @@ export default function Navbar(){
         <div id="FundoNavbar">
             <div className='cardNav'>
             <img src={logo} id='logoGeral' alt='logo branco'></img>
-            <img alt = 'foto do perfil'src={'http://localhost:5000/StaticFiles/Images/' + UsuarioLogado?.imgPerfil} className='imgPerfil'></img>
+            <img alt = 'foto do perfil'src={'https://loggex.azurewebsites.net/StaticFiles/Images/' + UsuarioLogado?.imgPerfil} className='imgPerfil'></img>
             </div>
             <section className='sectionNav'>
                 <h4>{UsuarioLogado?.nome}</h4>
