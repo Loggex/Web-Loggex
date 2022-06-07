@@ -51,7 +51,7 @@ export default function Motoristas() {
                         listaMotorista.map((motorista) => {
                             return (
                                 <div className='card'  key={motorista.idMotorista}>
-                                    <img src={'https://loggex.azurewebsites.net/StaticFiles/Images/' + motorista.idUsuarioNavigation.imgPerfil} alt="imagem do motorista" className='imgMotorista' />
+                                    <img src={'https://loggex.azurewebsites.net/StaticFiles/Images/Jose.jpg'} alt="imagem do motorista" className='imgMotorista' />
 
                                     <div className='posMotorista'>
                                         <div className='infoMotorista'>
