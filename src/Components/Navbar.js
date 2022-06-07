@@ -57,7 +57,7 @@ export default function Navbar(){
         <div id="FundoNavbar">
             <div className='cardNav'>
             <img src={logo} id='logoGeral' alt='logo branco'></img>
-            <img alt = 'foto do perfil'src={'https://loggex.azurewebsites.net/StaticFiles/Images/' + UsuarioLogado?.imgPerfil} className='imgPerfil'></img>
+            <img alt = 'foto do perfil'src={'https://loggex.azurewebsites.net/StaticFiles/Images/andre.png'} className='imgPerfil'></img>
             </div>
             <section className='sectionNav'>
                 <h4>{UsuarioLogado?.nome}</h4>
@@ -65,7 +65,7 @@ export default function Navbar(){
                 <div className='botoes'>
                 <Link to="/" className='navButton'><img src={home}/><span>Home</span></Link>
                 <Link to="/motoristas" onClick={onMotoristas} className='navButton'><img src={volante}/><span>Motoristas</span></Link>
-                <Link to="/veiculos" onClick={onVeiculos} className='navButton'><img src={truck}/><span>Veiculos</span></Link>
+                <Link to="/veiculos" onClick={onVeiculos} className='navButton'><img src={truck}/><span>Veículos</span></Link>
                 <Link to="/rotas" onClick={onRotas} className='navButton'><img src={rota}/><span>Rotas</span></Link>
                 </div>
                 <button className='botaoSair'onClick={deslogar}><span>Sair</span><img src={logout}alt='icone de sair'></img></button>

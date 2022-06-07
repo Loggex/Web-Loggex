@@ -260,7 +260,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .imgVeiculo {
@@ -268,6 +268,7 @@ h1 {
   width: he;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  display: none;
 }
 
 .infoVeiculo {
@@ -275,6 +276,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-left: 65px;
 }
 
 .textoVeiculo {
@@ -397,6 +399,7 @@ h1 {
 
 .infoRota {
   display: flex;
+  margin-left: 65px;
   height: 100%;
   width: 40%;
 }
