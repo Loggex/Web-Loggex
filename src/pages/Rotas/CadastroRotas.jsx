@@ -22,7 +22,7 @@ export default function CadastroRotas() {
 
         setIsLoading(true);
 
-        axios.post('https://loggex.azurewebsites.net/api/rotas', {
+        axios.post('http://loggex-backend.azurewebsites.net/api/rotas', {
 
             origem: origemInput,
             idVeiculo: veiculoInput,

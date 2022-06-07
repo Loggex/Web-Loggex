@@ -15,7 +15,7 @@ export default function Rota() {
 
     async function buscarRota() {
         await axios(
-          "https://loggex.azurewebsites.net/api/Rotas/idRota" +
+          "http://loggex-backend.azurewebsites.net/api/Rotas/idRota" +
             window.location.pathname.split("/")[2],
           {
             headers: {

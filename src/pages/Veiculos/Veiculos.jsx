@@ -18,7 +18,7 @@ export default function Veiculos() {
   };
 
   async function buscarVeiculos() {
-    await axios("https://loggex.azurewebsites.net/api/veiculos", {
+    await axios("http://loggex-backend.azurewebsites.net/api/veiculos", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("usuario-login"),
       },

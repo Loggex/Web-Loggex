@@ -51,7 +51,7 @@ export default function CadastroVeiculos() {
 
     axios
       .post(
-        "https://loggex.azurewebsites.net/api/veiculos",
+        "http://loggex-backend.azurewebsites.net/api/veiculos",
         {
           idTipoVeiculo: tipoVeiculoInput,
           placa: placaInput,
