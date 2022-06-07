@@ -111,8 +111,8 @@ export default function Checklist() {
                                     <Grid.Container xs={30} sm={4} gap={1}>
                                         <Grid>
                                             <p>Diferença de imagens</p>
-                                            <p>90%</p>
-                                            <Progress color="primary" value={90} />
+                                            <p>{Math.round(peca.semelhanca * 100)}%</p>
+                                            <Progress color="primary" value={Math.round(peca.semelhanca * 100)} />
                                         </Grid>
                                     </Grid.Container>
 
