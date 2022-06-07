@@ -12,6 +12,8 @@ import { Progress, Grid } from "@nextui-org/react";
 
 export default function Checklist() {
     const [listaPecas, setlistaPecas] = useState([]);
+    const [imgPeca, setImgPeca] = useState('')
+    const [imPecaC, setImgPecaC] = useState('')
     const location = useLocation()
     const { setVisible, bindings } = useModal();
 
@@ -34,6 +36,12 @@ export default function Checklist() {
 
             .catch(erro => console.log(erro));
     };
+
+    function MostrarImagens(endImagem, endImagemC) {
+        setImgPeca(endImagem)
+        setImgPecaC(endImagemC)
+        setVisible(true)
+    }
 
     useEffect(() => { BuscarPecas() }, []);
 
@@ -65,11 +73,11 @@ export default function Checklist() {
                                                 <div className='containerModal'>
                                                     <div className='boxImg'>
                                                         <p>Imagem original</p>
-                                                        <img src={"https://loggex.azurewebsites.net/StaticFiles/Images/" + peca.imgPecaC} alt="" />
+                                                        <img src={"https://loggex.azurewebsites.net/StaticFiles/Images/" + imPecaC} alt="" />
                                                     </div>
                                                     <div className='boxImg'>
                                                         <p>Imagem atual</p>
-                                                        <img src={"https://loggex.azurewebsites.net/StaticFiles/Images/" + peca.imgPeca} alt="" />
+                                                        <img src={"https://loggex.azurewebsites.net/StaticFiles/Images/" + imgPeca} alt="" />
                                                     </div>
                                                 </div>
                                             </Modal.Body>
@@ -108,7 +116,7 @@ export default function Checklist() {
                                         </Grid>
                                     </Grid.Container>
 
-                                    <button onClick={() => setVisible(true)} className='next'>
+                                    <button onClick={() => MostrarImagens(peca.imgPeca, peca.imgPecaC)} className='next'>
                                         <img src={chevron} alt="" />
                                     </button>
                                 </div>
