@@ -4,7 +4,7 @@ import axios from 'axios';
 // define a função para chamada das requisições
 const api = axios.create({
   // define a URL base das requisições
-  baseURL: 'http://loggex-backend.azurewebsites.net/api'
+  baseURL: 'http://deploy-loggex-backend.azurewebsites.net/api'
 });
 
 

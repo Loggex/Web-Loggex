@@ -25,7 +25,7 @@ export default function CadastroPecas() {
 
 
     // faz a chamada para a API
-    axios.post('http://loggex-backend.azurewebsites.net/api/tipospecas', {
+    axios.post('http://deploy-loggex-backend.azurewebsites.net/api/tipospecas', {
       nomePeca: nomePeca
     }, {
       headers: {

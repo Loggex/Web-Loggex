@@ -26,7 +26,7 @@ export default function CadastroMotorista() {
 
     axios
       .post(
-        "http://loggex-backend.azurewebsites.net/api/usuarios",
+        "http://deploy-loggex-backend.azurewebsites.net/api/usuarios",
         {
           idTipoUsuario: 2,
           nome: nomeInput,
@@ -54,7 +54,7 @@ export default function CadastroMotorista() {
           setIsLoading(false);
 
           axios
-            .get("http://loggex-backend.azurewebsites.net/api/usuarios/cpf/" + cpfIn, {
+            .get("http://deploy-loggex-backend.azurewebsites.net/api/usuarios/cpf/" + cpfIn, {
               headers: {
                 Authorization:
                   "Bearer " + localStorage.getItem("usuario-login"),
@@ -67,7 +67,7 @@ export default function CadastroMotorista() {
 
                 axios
                   .post(
-                    "http://loggex-backend.azurewebsites.net/api/motoristas",
+                    "http://deploy-loggex-backend.azurewebsites.net/api/motoristas",
                     {
                       idUsuario: idUsuarioBusca.idUsuario,
                       cnh: cnhInput,

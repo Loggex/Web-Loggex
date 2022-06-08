@@ -32,7 +32,7 @@ export default function Navbar(){
 
        function buscarUsuario() {
 
-         axios('http://loggex-backend.azurewebsites.net/api/usuarios/' + parseJwt().jti , {
+         axios('http://deploy-loggex-backend.azurewebsites.net/api/usuarios/' + parseJwt().jti , {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -57,7 +57,7 @@ export default function Navbar(){
         <div id="FundoNavbar">
             <div className='cardNav'>
             <img src={logo} id='logoGeral' alt='logo branco'></img>
-            <img alt = 'foto do perfil'src={'http://loggex-backend.azurewebsites.net/StaticFiles/Images/andre.png'} className='imgPerfil'></img>
+            <img alt = 'foto do perfil'src={'http://deploy-loggex-backend.azurewebsites.net/StaticFiles/Images/andre.png'} className='imgPerfil'></img>
             </div>
             <section className='sectionNav'>
                 <h4>{UsuarioLogado?.nome}</h4>
